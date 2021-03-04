@@ -244,3 +244,6 @@ p{
         border-left-color: rgb(255, 45, 157);
     } 
 } 
+.mockupMobile{
+    width: 60vw;height:auto;
+}
