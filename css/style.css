@@ -286,3 +286,13 @@ p{
         height: auto;
     }
 }
+.correct{
+    color: rgb(26, 202, 26);
+}
+.wrong{
+    color: rgb(255, 71, 71);
+}
+.wrongBody{
+    color: hsl(0, 100%, 77%);
+    /* background-color: #2C313B; */
+}
