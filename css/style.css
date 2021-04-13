@@ -296,3 +296,7 @@ p{
     color: hsl(0, 100%, 77%);
     /* background-color: #2C313B; */
 }
+.spacer{
+    height: auto;
+    min-height: 60px;
+}
