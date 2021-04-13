@@ -1,1 +1,6 @@
-User-Agent: *Disallow:Sitemap: https://sapython.me/sitemap.xml
+User-Agent: *
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /assets/
+Sitemap: https://sapython.me/sitemap.xml
