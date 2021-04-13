@@ -172,7 +172,22 @@ p{
     animation: animate 1s ease-out forwards; 
     border-style:double;
 } 
- 
+.up{
+    background:rgba(1,1,1,0.2);
+    border:none;
+    padding:20px;
+    border-radius:20px;
+}
+.up:hover{
+    background:rgba(1,1,1,0.4);
+}
+.up::after:hover{
+    box-shadow: 3px 0px 20px #383e4b;
+}
+.up::before:hover{
+    box-shadow: 3px 0px 20px #2b303a;
+}
+
 @keyframes animate { 
     0% { 
         width: 0; 
