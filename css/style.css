@@ -247,6 +247,23 @@ p{
 .mockupMobile{
     width: 60vw;height:auto;
 }
+.floatyContact{
+    position:fixed;
+    padding: 10px 10px;
+	width:120px;
+	height:60px;
+	bottom:40px;
+	right:0px;
+    margin-right: 0px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:20px;
+    transform: rotate(-90deg);
+	text-align:center;
+	/* box-shadow: 2px 2px 3px #999; */
+    z-index: 200000;
+}
+
 @media only screen and (max-width: 600px) {
     .FuWdMob{
         width: 100vw;
