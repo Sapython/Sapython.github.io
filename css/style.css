@@ -11,9 +11,13 @@
         opacity: 0;
     }
 }
+::selection{
+    background-color:#1b202a;
+}
 body{
     background-color:#2C313B;
 }
+
 .bg{
     background-color: #2C313B;
 }
@@ -131,11 +135,12 @@ p{
 } */
 .liftup:hover {
     animation: slowShadow 600ms ease-in-out 1 forwards;
-    
 }
+
 .liftuptop:hover {
     animation: slowTopShadow 600ms ease-in-out 1 forwards;
 }
+
 .footer {
     display: block;
 }
@@ -186,6 +191,22 @@ p{
 }
 .up::before:hover{
     box-shadow: 3px 0px 20px #2b303a;
+}
+.nav{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100vw;
+    background-color: transparent;
+}
+.primary{
+    background-color: #2C313B;
+}
+.secondary{
+    background-color: #1b202a;
+}
+.tertiary{
+    background-color: #333946;
 }
 
 @keyframes animate { 
@@ -299,4 +320,21 @@ p{
 .spacer{
     height: auto;
     min-height: 60px;
+}
+.userImage{
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-radius: 300px;
+    left:50%;
+    transform:translate(-50%)
+}
+.userImage2{
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-radius: 300px;
+}
+.text-shadow{
+    text-shadow: 5px 5px 5px rgb(19, 19, 19);
 }
