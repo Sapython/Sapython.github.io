@@ -33,6 +33,9 @@ body{
 .txt{
     color: azure;
 }
+.txt:hover{
+    color:rgb(209, 209, 209);
+}
 .t1{
     font-size: xxx-large;
 }
@@ -133,12 +136,15 @@ p{
 /* .liftup{
     animation: slowShadow 300ms ease-in-out 1 forwards reverse;
 } */
+.liftup{
+    transition: all 1s;
+}
 .liftup:hover {
-    animation: slowShadow 600ms ease-in-out 1 forwards;
+    box-shadow: 10px 20px 20px #131313;
 }
 
 .liftuptop:hover {
-    animation: slowTopShadow 600ms ease-in-out 1 forwards;
+    box-shadow: -10px -10px 20px #292929;
 }
 
 .footer {

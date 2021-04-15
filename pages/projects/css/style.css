@@ -1,0 +1,26 @@
+@keyframes readMoreAnimation{
+    to{
+        background-color: #333946;
+        padding: 10px 10px;
+        color: cornflowerblue;
+        border-radius: 5px;
+        box-shadow: 2px 10px 120px black;
+    }
+}
+.readMore{
+    color: white;
+    transition: all 1s;
+}
+.readMore:hover{
+    /* animation: readMoreAnimation s forwards ease-in-out; */
+    background-color: #333946;
+    padding: 10px 10px;
+    color: cornflowerblue;
+    border-radius: 5px;
+    box-shadow: 2px 10px 120px black;
+    text-decoration: none;
+}
+.uk-label-iconic{
+    background-color: rgb(159, 57, 255);
+    color:white;
+}
