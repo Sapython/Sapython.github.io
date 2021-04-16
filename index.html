@@ -47,7 +47,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" crossorigin="anonymous" loading="lazy">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="js/output.min.js"></script>
     <script src="js/script.js"></script>
     <script
@@ -56,7 +55,7 @@
         data-id="sapython" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F"
         data-position="left" data-x_margin="18" data-y_margin="18" loading="lazy">
         </script>
-    <script src="//code.jivosite.com/widget/hIsQjL23eH" async></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
     <script type='text/javascript'
         src='https://platform-api.sharethis.com/js/sharethis.js#property=6076cfc56f8e97001192ac41&product=inline-follow-buttons'
         async='async'></script>
@@ -69,6 +68,16 @@
                 <button style="background-color: transparent;border:none;" type="button" class="uk-padding-small"
                     uk-toggle="target: #offcanvas-nav-primary"><span class="fa fa-compass"
                         style="color:rgb(255, 174, 24);font-size:xx-large"></span></button>
+                <a class="uk-navbar-toggle" style="background-color: transparent;right:10px" href="#modal-full" uk-search-icon uk-toggle></a>
+                <div id="modal-full" class="uk-modal-full uk-modal primary" style="z-index:999999" uk-modal>
+                    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle primary" uk-height-viewport>
+                        <!-- <button class="uk-modal-close-full primary" style="height:100px;width:auto" type="button" uk-close></button> -->
+                        <form class="uk-search uk-search-large uk-width-1-2">
+                            <input class="uk-search-input uk-text-center" type="search" placeholder="Search" autofocus onkeydown="idx.search(this.value)">
+                            <button class="uk-modal-close-full primary" style="font-size: 40px;" type="button" uk-close="ratio:2"></button>
+                        </form>
+                    </div>
+                </div>
             </nav>
             <div id="offcanvas-nav-primary" uk-offcanvas="mode: push;overlay: true">
                 <div class="uk-offcanvas-bar uk-flex uk-flex-column">
@@ -148,8 +157,18 @@
                         solopreneur, One who can build website, One who can build apps</span>
                     <p class="text-slider" style="color: aliceblue;"></p>
                 </h3>
-                <a href="#plans" uk-scroll><button class="bttn-pill bttn-md bttn-warning horizontalCenter"
-                        style="margin-left: 40px;">Hire Me</button></a>
+                <div class="uk-flex">
+                    <a href="#plans" uk-scroll>
+                        <button class="bttn-pill bttn-md bttn-warning horizontalCenter">
+                            Hire Me
+                        </button>
+                    </a>
+                    <a href="./pages/contact/contact.html">
+                        <button class="bttn-pill bttn-md bttn-danger uk-margin-left horizontalCenter nodec">
+                            Contact Me
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -195,7 +214,7 @@
                 You can contact me.
                 <br>
                 <button class="bttn-float bttn-md curvey hrPadding" style="background-color:#111420;border: none;">
-                    <a href="mailto:saptampro2003@gmail.com?&subject='I want to '&body='I want to ask you about some development related '"
+                    <a href="mailto:saptampro2003@gmail.com?&subject=I need some help. &body=I want to ask you about some software related information"
                         style="text-decoration: none;padding: 10px 10px 10px 10px;">
                         Mail Me
                     </a>
@@ -204,8 +223,8 @@
 
         </div>
     </section>
-    <section class="uk-section-muted uk-padding-small bg" id="projects">
-        <hr height=5 class="uk-divider-icon">
+    <section class="uk-section-muted uk-padding-small uk-margin-large-top bg" id="projects">
+        <!-- <hr height=5 class="uk-divider-icon"> -->
         <div class="txt t2" style="text-align: center;">My Projects</div>
         <div style="margin-top: 40px;">
             <div class="uk-child-width-expand@s uk-text-center" uk-grid
@@ -283,6 +302,13 @@
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="uk-text-center uk-margin-medium-top">
+            <a href="./pages/projects/projects.html">
+                <button class="bttn-float bttn-md curvey hrPadding" style="background-color:#c21c40;border: none;padding: 5px 30px;">
+                    See All Projects
+                </button>
+            </a>
         </div>
     </section>
     <section class="spacer"></section>
@@ -410,11 +436,13 @@
                 <form
                     action="https://sapython.us1.list-manage.com/subscribe/post?u=36945f41714b84a3726d6bf4c&amp;id=fb40d09aa5"
                     method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="validate alignCenter subscribeForm uk-text-center" style="position:relative" target="_blank" novalidate>
+                    class="validate alignCenter subscribeForm uk-text-center" style="position:relative" target="_blank"
+                    novalidate>
                     <div id="mc_embed_signup_scroll">
-                        <h4 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin"
-                            style="font-size:xx-large;">Subscribe</h4>
-                        <input type="email" name="EMAIL" class="email uk-margin" id="mce-EMAIL" placeholder="Email" required>
+                        <h4 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin" style="font-size:xx-large;">
+                            Subscribe</h4>
+                        <input type="email" name="EMAIL" class="email uk-margin" id="mce-EMAIL" placeholder="Email"
+                            required>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                 name="b_36945f41714b84a3726d6bf4c_fb40d09aa5" tabindex="-1" value=""></div>
                         <div class="clear uk-margin"><input type="submit" value="Subscribe" name="subscribe"
@@ -628,6 +656,19 @@
         <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
     </footer>
     <script>
+        var indexes=[{
+            "name":"alpha",
+            "text":"This is the text"
+        }]
+        var idx = lunr(function () {
+            this.ref('name')
+            this.field('text')
+          
+            indexes.forEach(function (doc) {
+              this.add(doc)
+            }, this)
+        })
+          
         if ($(".text-slider").length == 1) {
             var typed_strings =
                 $(".text-slider-items").text();

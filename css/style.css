@@ -361,6 +361,12 @@ p{
 .subscribeForm{
     width: 520px;
 }
+.nodec{
+    text-decoration: none;
+}
+.nodec:hover{
+    text-decoration: none;
+}
 @media screen and (min-width:200px) and (max-width:500px) {
     .subscribeForm{
         width: 250px;
