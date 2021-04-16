@@ -14,6 +14,9 @@
 ::selection{
     background-color:#1b202a;
 }
+html,body{
+    overflow-x: hidden;
+}
 body{
     background-color:#2C313B;
 }
@@ -344,4 +347,29 @@ p{
 }
 .text-shadow{
     text-shadow: 5px 5px 5px rgb(19, 19, 19);
+}
+.email{
+    width: 500px;
+    border: none;
+    height: 30px;
+    border-radius: 50px;
+    color:white;
+    font-size: large;
+    padding: 10px;
+    background-color: #0D293F;
+}
+.subscribeForm{
+    width: 520px;
+}
+@media screen and (min-width:200px) and (max-width:500px) {
+    .subscribeForm{
+        width: 250px;
+    }
+    .email{
+        width: 250px;
+    }
+    .userImage{
+        width: 100px;
+        border-radius: 50px;
+    }
 }
