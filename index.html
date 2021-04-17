@@ -68,14 +68,21 @@
                 <button style="background-color: transparent;border:none;" type="button" class="uk-padding-small"
                     uk-toggle="target: #offcanvas-nav-primary"><span class="fa fa-compass"
                         style="color:rgb(255, 174, 24);font-size:xx-large"></span></button>
-                <a class="uk-navbar-toggle" style="background-color: transparent;right:10px" href="#modal-full" uk-search-icon uk-toggle></a>
+                <a class="uk-navbar-toggle" style="background-color: transparent;right:10px" href="#modal-full"
+                    uk-search-icon uk-toggle></a>
                 <div id="modal-full" class="uk-modal-full uk-modal primary" style="z-index:999999" uk-modal>
-                    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle primary" uk-height-viewport>
-                        <!-- <button class="uk-modal-close-full primary" style="height:100px;width:auto" type="button" uk-close></button> -->
-                        <form class="uk-search uk-search-large uk-width-1-2">
-                            <input class="uk-search-input uk-text-center" type="search" placeholder="Search" autofocus onkeydown="idx.search(this.value)">
-                            <button class="uk-modal-close-full primary" style="font-size: 40px;" type="button" uk-close="ratio:2"></button>
-                        </form>
+                    <div class="uk-modal-dialog primary" uk-height-viewport>
+                        <div class="uk-flex uk-flex-center uk-flex-middle uk-height-large">
+                            <form class="uk-search uk-search-large uk-width-1-2">
+                                <input class="uk-search-input uk-text-center" type="search" placeholder="Search"
+                                    autofocus onkeydown="search(this.value)">
+                                <button class="uk-modal-close-full primary" style="font-size: 40px;" type="button"
+                                    uk-close="ratio:2"></button>
+                            </form>
+                        </div>
+                        <div class="uk-grid-column-small uk-grid-row-large uk-height-large uk-child-width-1-3@s uk-child-width-1-4@l uk-text-center"
+                            uk-grid id="searchResults">
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -305,7 +312,8 @@
         </div>
         <div class="uk-text-center uk-margin-medium-top">
             <a href="./pages/projects/projects.html">
-                <button class="bttn-float bttn-md curvey hrPadding" style="background-color:#c21c40;border: none;padding: 5px 30px;">
+                <button class="bttn-float bttn-md curvey hrPadding"
+                    style="background-color:#c21c40;border: none;padding: 5px 30px;">
                     See All Projects
                 </button>
             </a>
@@ -656,19 +664,205 @@
         <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
     </footer>
     <script>
-        var indexes=[{
-            "name":"alpha",
-            "text":"This is the text"
-        }]
-        var idx = lunr(function () {
-            this.ref('name')
-            this.field('text')
-          
-            indexes.forEach(function (doc) {
-              this.add(doc)
-            }, this)
-        })
-          
+        var indexes = [
+            {
+                "tag1": { "text": "Premium", "id": "danger" },
+                "tag2": { "text": "Website", "id": "default" },
+                "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO": "2021-04-01T19:00",
+                "dateText": "April 01, 2021",
+                "title": "Philosophy Today",
+                "image": "../../images/javaCode.jpg",
+                "author": {
+                    "name": "Kumar Saptam",
+                    "about": "A self taught solopreneur and programmer who can build apps and websites.",
+                    "image": "../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Basic","id":"warning"},
+                "tag2": {"text":"Website","id":"default"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"Philosophy News",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Iconic","id":"iconic"},
+                "tag2": {"text":"Website","id":"default"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"Sapython",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            {
+                "name": "Fryer Man",
+                "data": "this is data",
+                "tag1": { "text": "Iconic", "id": "iconic" },
+                "tag2": { "text": "Website", "id": "default" },
+                "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO": "2021-04-01T19:00",
+                "dateText": "April 01, 2021",
+                "title": "Philosophy Today",
+                "image": "../../images/javaCode.jpg",
+                "author": {
+                    "name": "Kumar Saptam",
+                    "about": "A self taught solopreneur and programmer who can build apps and websites.",
+                    "image": "../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Premium","id":"danger"},
+                "tag2": {"text":"Website","id":"default"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"JPMC Trust",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Premium","id":"danger"},
+                "tag2": {"text":"Website","id":"default"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"Jaitra Inc",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Iconic","id":"iconic"},
+                "tag2": {"text":"App","id":"success"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"Philosophy Today",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Basic","id":"warning"},
+                "tag2": {"text":"App","id":"success"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"Sakha",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            {
+                "tag1": {"text":"Premiuim","id":"danger"},
+                "tag2": {"text":"App","id":"success"},
+                "excerpt":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus tincidunt commodo. Nunc justo nisi, vestibulum facilisis porta vestibulum, ultrices volutpat arcu. Quisque nec dui mattis, fringilla magna in, vulputate enim. Fusce ut euismod ligula, id laoreet ex.",
+                "dateISO":"2021-04-01T19:00",
+                "dateText":"April 01, 2021",
+                "title":"Lab Management Software",
+                "image":"../../images/javaCode.jpg",
+                "author":{
+                    "name":"Kumar Saptam",
+                    "about":"A self taught solopreneur and programmer who can build apps and websites.",
+                    "image":"../../favicon2.ico",
+                }
+            },
+            
+        ]
+        function search(value) {
+            console.log(value);
+            if (value != '' && value != ' ' && value.length>3) {
+                var data = "";
+                for (i = 0; i < indexes.length; i++) {
+                    console.log(indexes[i], indexes[i]["title"].search(value))
+                    if ((indexes[i]["title"].toLocaleLowerCase().includes(value.toLocaleLowerCase())) == 1) {
+                        data += `
+                        <li data-type="website" data-plan="premium" uk-scrollspy="cls: uk-animation-fade; delay: 100; repeat: false">
+                            <div class="uk-card uk-width-auto uk-dark tertiary liftup">
+                                <div class="uk-card-media-top uk-inline-clip uk-transition-toggle" tabindex="0">
+                                    <img class="uk-transition-scale-up uk-transition-opaque" src="`+ indexes[i]["image"] + `"
+                                        alt="`+indexes[i]["title"]+`">
+                                </div>
+                                <div class="uk-card-header secondary">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="`+ indexes[i]["author"]["image"] + `">
+                                            <div style="width:100px" class="primary"
+                                                uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
+                                                <p class="uk-card-title">`+ indexes[i]["author"]["name"] + `</p>
+                                                <p>`+ indexes[i]["author"]["about"] + `</p>
+                                            </div>
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h3 class="uk-card-title uk-margin-remove-bottom txt">`+indexes[i]["title"]+`</h3>
+                                            <p class="uk-text-meta uk-margin-remove-top">
+                                                <time datetime="`+ indexes[i]["dateISO"] + `">` + indexes[i]["dateText"] + `</time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="margin: 0%;border-color: #333946;">
+                                <div class="uk-card-body secondary">
+                                    <span class="uk-card-badge uk-label uk-label-danger uk-margin-medium-bottom">Premium</span>
+                                    <span class="uk-label uk-label-`+ indexes[i]["tag1"]["id"] + `">`+indexes[i]["tag1"]["text"]+`</span>
+                                    <span class="uk-label uk-label-`+indexes[i]["tag2"]["id"]+`">`+indexes[i]["tag2"]["text"]+`</span>
+                                    <ul uk-accordion>
+                                        <li style="text-align: start;">
+                                            <p class="txt">`+indexes[i]["excerpt"]+`</p>
+                                            <a class="uk-accordion-title txt">More</a>
+                                            <div class="uk-accordion-content uk-text-justify txt">`+indexes[i]["description"]+`</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr style="margin: 0%;border-color: #333946;">
+                                <div class="uk-card-footer secondary">
+                                    <a href="#" class="txt readMore">Read more</a>
+                                </div>
+                            </div>
+                        </li>`
+                    }
+                }
+                document.getElementById('searchResults').innerHTML = data;
+            } else {
+                document.getElementById('searchResults').innerHTML = "";
+            }
+
+        }
         if ($(".text-slider").length == 1) {
             var typed_strings =
                 $(".text-slider-items").text();
