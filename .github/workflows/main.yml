@@ -27,3 +27,5 @@ jobs:
         echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
         echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
         echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+    - name: Ping Google
+      run: curl https://www.google.com/ping?sitemap=https://sapython.me/sitemap.xml
