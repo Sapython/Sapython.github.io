@@ -31,6 +31,12 @@
             "sizes":"256x256",
             "type":"image/png",
             "purpose": "any"
+        },
+        {
+            "src": "/images/logoFull-512-512.png",
+            "sizes":"512x512",
+            "type":"image/png",
+            "purpose": "maskable"
         }
     ],
     "start_url": "/index.html",
