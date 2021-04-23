@@ -59,6 +59,7 @@
     <script type='text/javascript'
         src='https://platform-api.sharethis.com/js/sharethis.js#property=6076cfc56f8e97001192ac41&product=inline-follow-buttons'
         async='async'></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-37TRNTCP6D"></script>
 </head>
 
 <body>
@@ -664,6 +665,10 @@
         <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
     </footer>
     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-37TRNTCP6D');
         var indexes = [
             {
                 "tag1": { "text": "Premium", "id": "danger" },
@@ -802,14 +807,13 @@
                     "image":"../../favicon2.ico",
                 }
             },
-            
         ]
+        
         function search(value) {
             console.log(value);
             if (value != '' && value != ' ' && value.length>3) {
                 var data = "";
                 for (i = 0; i < indexes.length; i++) {
-                    console.log(indexes[i], indexes[i]["title"].search(value))
                     if ((indexes[i]["title"].toLocaleLowerCase().includes(value.toLocaleLowerCase())) == 1) {
                         data += `
                         <li data-type="website" data-plan="premium" uk-scrollspy="cls: uk-animation-fade; delay: 100; repeat: false">
