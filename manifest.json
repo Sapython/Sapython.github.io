@@ -9,8 +9,8 @@
             "purpose": "any"
         },
         {
-            "src": "/images/logo-144-144.png",
-            "sizes":"144x144",
+            "src": "/images/logo-114-114.png",
+            "sizes":"114x114",
             "type":"image/png",
             "purpose": "any"
         },
