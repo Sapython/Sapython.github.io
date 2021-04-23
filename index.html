@@ -102,8 +102,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" crossorigin="anonymous" loading="lazy">
-    <script src="js/output.min.js"></script>
-    <script src="js/script.js"></script>
     <!-- <script
         id="mcjs" async loading="lazy">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/36945f41714b84a3726d6bf4c/3c25581139a9b4f3cb071c1ed.js");</script> -->
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
@@ -130,7 +128,7 @@
 
 <body>
     <header style="height:100vh;width:100vw;background-color:#2C313B;" id="header">
-        <div id="particles-js" style="z-index: -1;width: 100vw;height: 100vh;">
+        <div id="particles-js" class="particles-js-canvas-el" style="z-index: -1;width: 100vw;height: 100vh;">
             <nav class="nav uk-flex">
                 <button style="background-color: transparent;border:none;" type="button" class="uk-padding-small"
                     uk-toggle="target: #offcanvas-nav-primary"><span class="fa fa-compass"
@@ -772,6 +770,8 @@
             }
           }
     </script>
+    <script src="js/output.min.js"></script>
+    <script src="js/script.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
