@@ -1,0 +1,29 @@
+{
+    "short_name": "Sapython",
+    "name": "Sapython Service",
+    "icons": [
+        {
+            "src": "/images/logo-57-57.png",
+            "sizes":"57x57",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/logo-144-144.png",
+            "sizes":"144x144",
+            "type":"image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/logo-72-72.png",
+            "sizes":"72x72",
+            "type":"image/png",
+            "purpose": "any"
+        }
+        
+    ],
+    "start_url": "/index.html",
+    "background_color": "#2C313B",
+    "display": "standalone",
+    "theme_color": "#2C313B"
+}
