@@ -145,9 +145,11 @@ p{
 .liftup:hover {
     box-shadow: 10px 20px 20px #131313;
 }
-
+.liftUp{
+    transition: all 1s;
+}
 .liftuptop:hover {
-    box-shadow: -10px -10px 20px #292929;
+    box-shadow: -10px -10px 20px #24282F;
 }
 
 .footer {
