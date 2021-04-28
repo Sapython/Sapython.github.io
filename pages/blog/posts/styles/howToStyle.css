@@ -315,3 +315,70 @@ aside{
 .gsc-search-button{
     content: "Search" !important;
 }
+.noBorder{
+    border: none;
+}
+.noBorder:active{
+    border: none;
+}
+.noBorder:hover{
+    border: none;
+}
+.noBorder:focus{
+    border: none;
+}
+.gsc-modal-background-image-visible{
+    background-color: #252729b7 !important;
+}
+.gsc-results-wrapper-visible{
+    background-color: #20242b !important;
+}
+#master-2{
+    display: none !important;
+}
+.gsc-adBlock{
+    display: none !important;
+}
+.gcsc-more-maybe-branding-root{
+    display: none !important;
+}
+.gsc-result{
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-top:2px grey !important;
+}
+.gs-result{
+    color:white !important;
+}
+.gsc-webResult{
+    background-color: #20242b !important;   
+}
+.gs-title{
+    color: cornflowerblue !important;
+}
+.gs-title>b{
+    color: rgb(157, 82, 255) !important;
+}
+.gs-snippet{
+    color: lightgrey !important;
+}
+.gs-image{
+    border: none !important;
+}
+.gs-snippet > b{
+    color: orange !important;
+}
+.gsc-selected-option-container{
+    background-color: #1d2127 !important;
+}
+.gsc-option-menu{
+    background-color: #1d2127 !important;
+}
+.gsc-option-menu-item-highlighted{
+    background-color: #20242b !important;   
+}
+.gsc-above-wrapper-area{
+    border-bottom-color: #123768 !important;
+}
+

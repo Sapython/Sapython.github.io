@@ -43,8 +43,8 @@
     <meta name="theme-color" content="#2C313B">
     <meta name='distribution' content='Global'>
     <meta name="author" content="Kumar Saptam" />
-    <link rel="icon" sizes="192x192" href="http://sapython.me/favicon.ico">
-    <link rel="icon" rel="apple-touch-icon" sizes="192x192 16x16 32x32 64x64 128x128" href="http://sapython.me/favicon.ico">
+    <link rel="icon" sizes="192x192" href="https://sapython.me/favicon.ico">
+    <link rel="icon" rel="apple-touch-icon" sizes="192x192 16x16 32x32 64x64 128x128" href="https://sapython.me/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Expires" content="600" />
     <meta name="description"
@@ -73,13 +73,13 @@
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
     <meta name='format-detection' content='telephone=no'>
 
-    <link href='http://sapython.me/logo.png' rel='apple-touch-icon' type='image/png'>
-    <link href='http://sapython.me/logo-72-72.png' rel='apple-touch-icon' sizes='72x72'>
-    <link href='http://sapython.me/logo-114-114.png' rel='apple-touch-icon' sizes='114x114'>
-    <link href='http://sapython.me/Sapython-Banner.png' rel='apple-touch-startup-image'>
-    <link href='http://sapython.me/logo-114-114.png' sizes='114x114' rel='apple-touch-icon-precomposed'>
-    <link href='http://sapython.me/logo-72-72.png' sizes='72x72' rel='apple-touch-icon-precomposed'>
-    <link href='http://sapython.me/logo-57-57.png' sizes='57x57' rel='apple-touch-icon-precomposed'>
+    <link href='https://sapython.me/logo.png' rel='apple-touch-icon' type='image/png'>
+    <link href='https://sapython.me/logo-72-72.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='https://sapython.me/logo-114-114.png' rel='apple-touch-icon' sizes='114x114'>
+    <link href='https://sapython.me/Sapython-Banner.png' rel='apple-touch-startup-image'>
+    <link href='https://sapython.me/logo-114-114.png' sizes='114x114' rel='apple-touch-icon-precomposed'>
+    <link href='https://sapython.me/logo-72-72.png' sizes='72x72' rel='apple-touch-icon-precomposed'>
+    <link href='https://sapython.me/logo-57-57.png' sizes='57x57' rel='apple-touch-icon-precomposed'>
 
     <!-- Google tags -->
     <meta name="news_keywords" content=" , text emphasis alpha programming chariot meaning special cool 2021 amazing python list strings objetoriented programming">
@@ -91,7 +91,7 @@
     <!-- Site tags and sources -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="styles/howToStyle.css">
-    <link rel="icon" href="http://sapython.me/favicon.ico" sizes="16x16 32x32" type="image/png">
+    <link rel="icon" href="https://sapython.me/favicon.ico" sizes="16x16 32x32" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" loading="lazy" async />
@@ -209,13 +209,50 @@
     <main>
         <aside>
             <div class="uk-flex-column uk-margin uk-card-default bg2 mainBlogText">
-                <div class="uk-card bg2 liftup">
-                    <p style="font-size: xx-large;">Search</p>
-                    <br><div class="gcse-search"></div></div>
+                <div class="uk-card bg2">
+                    <p style="font-size: xx-large;" uk-tooltip="title: Search; delay: 500">Search</p>
+                    <div class="liftup uk-margin">
+                        <div class="gcse-search">
+                            <script loading="lazy">
+                                var a = setInterval(()=>{
+                                    var elements = document.getElementsByClassName("gsc-search-button")
+                                    console.log("ELemets "+elements,elements.length)
+                                    for (let i =0; i< elements.length; i++){
+                                        elements[i].innerHTML='<span uk-search-icon style="width:20px;height:20px"></span>'
+                                        console.log("ELement data",elements[0].innerHTML)
+                                        clearInterval(a);
+                                    }
+    
+                                },500
+                                )
+                            </script>
+                        </div>
+                    </div>
+                </div>
                 <p style="font-size: xx-large;">About Me</p>
                 <div>
                     A self taught programmer who can build apps, websites, and servers. For any open source or
                     commercial projects.
+                </div>
+                <div class="uk-card bg3 liftup uk-margin">
+                    <div class="uk-h3"></div>
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: scale">
+                        <ul class="uk-slideshow-items">
+                            <li>
+                                <img src="../../../images/Sapython-Banner.png" alt="" uk-cover>
+                            </li>
+                            <li>
+                                <img src="../../../images/messaging.png" alt="" uk-cover>
+                            </li>
+                            <li>
+                                <img src="../../../images/laptopOnTable.jpg" alt="" uk-cover>
+                            </li>
+                        </ul>
+            
+                        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            
+                    </div>
                 </div>
                 <ul uk-accordion class="bg1">
                     <li class="bg3 uk-open" style="padding: 5px 10px;">
@@ -224,7 +261,7 @@
                             <div class="uk-margin">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-media-top">
-                                        <img src="http://sapython.me/images/javaCode.jpg" alt="">
+                                        <img src="https://sapython.me/images/javaCode.jpg" alt="">
                                     </div>
                                     <div class="uk-card bg2" style="padding: 5px 10px;">
                                         <p class="txt " style="font-size:larger">Media Top</p>
@@ -234,7 +271,7 @@
                             <div class="uk-margin">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-media-top">
-                                        <img src="http://sapython.me/images/javaCode.jpg" alt="">
+                                        <img src="https://sapython.me/images/javaCode.jpg" alt="">
                                     </div>
                                     <div class="uk-card bg2" style="padding: 5px 10px;">
                                         <p class="txt " style="font-size:larger">Media Top</p>
@@ -244,7 +281,7 @@
                             <div class="uk-margin">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-media-top">
-                                        <img src="http://sapython.me/images/javaCode.jpg" alt="">
+                                        <img src="https://sapython.me/images/javaCode.jpg" alt="">
                                     </div>
                                     <div class="uk-card bg2" style="padding: 5px 10px;">
                                         <p class="txt " style="font-size:larger">Media Top</p>
@@ -255,23 +292,28 @@
                     </li>
                     <li class="bg3 uk-padding" style="padding: 5px 10px;">
                         <a class="uk-accordion-title txt2" href="#">Post Of the day</a>
-                        <div class="uk-accordion-content">
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                        <div class="uk-margin uk-accordion-content">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-media-top">
+                                    <img src="https://sapython.me/images/javaCode.jpg" alt="">
+                                </div>
+                                <div class="uk-card bg2" style="padding: 5px 10px;">
+                                    <p class="txt " style="font-size:larger">Media Top</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li class="bg3 uk-padding" style="padding: 5px 10px;">
                         <a class="uk-accordion-title txt2" href="#">My Tweety Twitter.</a>
-                        <div class="uk-accordion-content" style="overflow-y: scroll;height:30vh ;">
-                            <a class="twitter-timeline uk-height-1-1"
-                                href="https://twitter.com/saptam_kumar?ref_src=twsrc%5Etfw">Tweets by saptam_kumar</a>
-                            <script src="https://platform.twitter.com/widgets.js" charset="utf-8"
-                                loading="lazy"></script>
+                        <div class="uk-accordion-content">
+                            <p style="font-size:large;">Follow me on twitter</p>
+                            <a href="https://twitter.com/saptam_kumar?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @saptam_kumar</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <p style="font-size:large;">Mention me on twitter</p>
+                            <a href="https://twitter.com/intent/tweet?screen_name=saptam_kumar&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @saptam_kumar</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                     </li>
                 </ul>
-                <div class="uk-card bg3 liftup" id="tagCloud"></div>
-                <div class="uk-card bg3 neo liftup uk-padding">
+                <div class="uk-card bg3 liftup uk-padding" style='background-image: url("../../../images/parallax2.jpg");background-size: cover;'>
                     <div>
                         <form
                         action="https://sapython.us1.list-manage.com/subscribe/post?u=36945f41714b84a3726d6bf4c&amp;id=fb40d09aa5"
@@ -280,7 +322,7 @@
                         target="_blank" novalidate>
                             <div class="uk-card">
                                 <p class="uk-text-center"style="font-size:xx-large;">Subscribe</p>
-                                <input type="email" name="EMAIL" class="email uk-margin" id="mce-EMAIL" placeholder="Email"
+                                <input type="email" name="EMAIL" class="email uk-margin noBorder" id="mce-EMAIL" placeholder="Email"
                                     required>
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                         name="b_36945f41714b84a3726d6bf4c_fb40d09aa5" tabindex="-1" value=""></div>
@@ -296,7 +338,7 @@
             <div class="uk-card uk-margin uk-card-default liftup bg2 mainBlogText">
                 <h1 class="txt">This is alpha beta joke</h1>
                 <div class="uk-flex">
-                    <img src="http://sapython.me/images/Kumar Saptam.jpg" alt="Kumar Saptam" class="avatar">
+                    <img src="https://sapython.me/images/Kumar Saptam.jpg" alt="Kumar Saptam" class="avatar">
                     <p class="txt uk-margin-medium-left" style="font-size: x-large;">
                         Kumar Saptam
                         <br><time datetime="2021-04-25T13:31" class="uk-text-italic"
@@ -304,9 +346,10 @@
                     </p>
                     <div class="sharethis-inline-follow-buttons uk-margin-medium-left"></div>
                 </div>
-                <h2 id="subheadingUrl">This is subheading</h2>
+                <h2 class="uk-heading-bullet">Why do I need it.</h2>
+                <h2 id="subheadingUrl uk-heading-bullet">This is subheading</h2>
                 <p>This si the text emphasis alpha programming chariot meaning special cool 2021 amazing python list strings objetoriented programming</p>
-                <img src="http://sapython.me/images/parallax.jpg" class="uk-align-center imageMedium" alt="">
+                <img src="https://sapython.me/images/parallax.jpg" class="uk-align-center imageMedium" alt="">
                 <div class="spacer">
                 </div>
                 <ul uk-accordion class="bg1">
@@ -332,8 +375,8 @@
             </div>
         </article>
     </main>
-    <footer class="uk-section uk-padding-small bg2 liftuptop wrapper" style="height: 40vh;" id="footer">
-        <img src="http://sapython.me/images/heart.svg" class="uk-animation-stroke" width="50" height="50"
+    <footer class="uk-section uk-padding-small bg2 liftuptop wrapper" style="height: 400px;width:100vw;" id="footer">
+        <img src="https://sapython.me/images/heart.svg" class="uk-animation-stroke" width="50" height="50"
             alt="This website is made by Kumar Saptam" loading="lazy">
         <p>Made with love from Saptam</p>
         <a href="#header" uk-scroll>
@@ -360,10 +403,10 @@
     </footer>
     <script type="application/ld+json">
         { 
-        "@context": "http://www.schema.org/", 
+        "@context": "https://www.schema.org/", 
         "@type": "Person", 
         "name" : "Kumar Saptam", 
-        "url": "http://sapython.me/", 
+        "url": "https://sapython.me/", 
         "sameAs" : [ 
         "https://github.com/Sapython/", 
         "twitter.com/saptam_kumar", 
@@ -374,14 +417,14 @@
     </script>
     <script type="application/ld+json">
         {
-            "@context": "http://www.schema.org/",
+            "@context": "https://www.schema.org/",
             "@type": "LocalBusiness",
             "name": "Sapython",
-            "url": "http://sapython.me/",
-            "logo": "http://sapython.me/images/logo.png",
+            "url": "https://sapython.me/",
+            "logo": "https://sapython.me/images/logo.png",
             "telephone": "+91 9517457296", 
             "pricerange":['50$', '100$', '300$', '1000$', '5000$'],
-            "image": "http://sapython.me/images/Sapython-Banner.png",
+            "image": "https://sapython.me/images/Sapython-Banner.png",
             "description": "A one stop solution for apps and website get your website running under 6 hours.", 
             "address": {
               "@type": "PostalAddress",
@@ -400,8 +443,8 @@
             }
           }
     </script>
-    <script src="js/output.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="https://sapython.me/js/output.min.js"></script> -->
+    <!-- <script src="https://sapython.me/js/script.js"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
