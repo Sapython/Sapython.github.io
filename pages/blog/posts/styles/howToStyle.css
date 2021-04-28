@@ -327,6 +327,9 @@ aside{
 .noBorder:focus{
     border: none;
 }
+
+/* Custom Search Options */
+
 .gsc-modal-background-image-visible{
     background-color: #252729b7 !important;
 }
