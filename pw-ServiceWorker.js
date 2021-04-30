@@ -11,7 +11,6 @@ const filesToCache=[
     'https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css',
     'https://www.googletagmanager.com/gtag/js?id=G-37TRNTCP6D',
     'https://sapython.me/images/Sapython-Banner.webp',
-    'https://checkout.razorpay.com/v1/payment-button.js',
     '/images/mockupMobile.webp',
     'images/parallax.webp',
     '/images/Kumar Saptam.jpg',
