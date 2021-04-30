@@ -19,7 +19,6 @@ const filesToCache=[
     'images/heart.svg',
     'favicon2.ico',
     'https://res.cloudinary.com/sapython/image/upload/v1619788430/javaCode_bae7z2.jpg',
-    'https://cdn.jsdelivr.net/gh/Sapython/Sapython.github.io@master/images/Kumar Saptam.jpg',
     'https://badges.razorpay.com/badge-dark.png',
     'https://trustlock.co/wp-content/uploads/2019/01/ssl-checkout-trust-seal.png',
     'https://trustlock.co/wp-content/uploads/2019/01/guaranteed-safe-checkout-5.png',
