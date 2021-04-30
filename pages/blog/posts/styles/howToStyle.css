@@ -231,8 +231,10 @@ article{
     width: 80vw;
 }
 aside{
+    position: sticky;
     float: right;
     width: 19vw;
+    min-height: 100vh;
 }
 .mainBlogText{
     height: fit-content;
@@ -327,7 +329,9 @@ aside{
 .noBorder:focus{
     border: none;
 }
-
+.rounded{
+    border-radius: 50px;
+}
 /* Custom Search Options */
 
 .gsc-modal-background-image-visible{
