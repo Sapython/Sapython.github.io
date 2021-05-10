@@ -1,43 +1,53 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset
-        xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
-                https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://sapython.me/</loc>
         <lastmod>2021-04-13T07:17:26+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://sapython.me/pages/blog/posts/howTo.html</loc>
-        <lastmod>2021-04-26T12:30:58+00:00</lastmod>
+        <loc>https://sapython.me/pages/blog/posts/How-to-create-a-keylogger-in-python-.html</loc>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://sapython.me/pages/blog/posts/test.html</loc>
-        <lastmod>2021-04-26T12:30:58+00:00</lastmod>
+        <loc>https://sapython.me/pages/blog/posts/How-to-create-beautiful-Command-Line-Scripts-for-python-.html</loc>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://sapython.me/pages/blog/posts/This-is-a-littel-adventure.html</loc>
-        <lastmod>2021-04-26T12:30:58+00:00</lastmod>
+        <loc>https://sapython.me/pages/blog/posts/This-is-another-blog-with-some-how-to-tutorial-.html</loc>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
     </url>
     
     <url>
-        <loc>https://sapython.me/pages/blog/posts/This-is-alpha-beta-joke.html</loc>
-        <lastmod>2021-04-26T12:30:58+00:00</lastmod>
+        <loc>https://sapython.me/pages/blog/posts/This-is-title.html</loc>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://sapython.me/pages/blog/posts/This-tips-are-risky.html</loc>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
     </url>
     
     <url>
         <loc>https://sapython.me/pages/contact/contact.html</loc>
-        <lastmod>2021-04-26T12:30:58+00:00</lastmod>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
     </url>
     
     <url>
         <loc>https://sapython.me/pages/projects/projects.html</loc>
-        <lastmod>2021-04-26T12:30:58+00:00</lastmod>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
+    </url>
+    
+    <url>
+        <loc>https://sapython.me/index.html</loc>
+        <lastmod>2021-05-09T12:25:28+00:00</lastmod>
     </url>
     
 </urlset>
