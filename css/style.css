@@ -401,3 +401,25 @@ p{
         border-radius: 50px;
     }
 }
+.navBar{
+    background-color:#1b202a;
+    width:100vw;
+    height:60px;
+}
+.navLinkContainer{
+    float:right;
+    padding:10px 10px;
+    margin-right: 200px;
+}
+.navLinkContainer>a{
+    text-decoration: none;
+    color:white;
+    font-weight: 500;
+    margin-left:40px;
+    font-size: larger;
+    transition:all 1s ease-in-out;
+}
+.navLinkContainer>a:hover{
+    color:rgb(182, 182, 182);
+}
+
