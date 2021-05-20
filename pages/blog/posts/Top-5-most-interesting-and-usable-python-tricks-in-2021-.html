@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+<head>
+<meta charset="utf-8"/>
+<title>Top 5 most interesting and usable python tricks in 2021.</title>
+<!-- OpenGraph Tags -->
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="./pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html" property="og:url"/>
+<meta content="Sapython" property="og:site_name"/>
+<meta content="Top 5 most interesting and usable python tricks in 2021." property="og:title"/>
+<meta content="20 May, 2021" name="revised"/>
+<meta content="The best and most interesting tips and tricks for python which can be used by any developer whether you are a beginner or a experienced developer, I promise you will definitely learn something from here. " property="og:description"/>
+<meta content="https://cdn.jsdelivr.net/gh/Sapython/Sapython.github.io@master/images/Top 5 most helpful python tricks.png" property="og:image"/>
+<meta content="Top 5 most interesting and usable python tricks in 2021." property="og:image:alt"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1920" property="og:image:width"/>
+<meta content="1080" property="og:image:height"/>
+<meta content="saptampro2003@gmail.com" name="og:email"/>
+<meta content="+91 9517457296" name="og:phone_number"/>
+<meta content="Avas Vikas Colony Jhunsi Allahabad" name="og:street-address"/>
+<meta content="India" name="og:locality"/>
+<meta content="IN" name="og:region"/>
+<meta content="211019" name="og:postal-code"/>
+<meta content="INDIA" name="og:country-name"/>
+<!-- Twitter Tags -->
+<meta content="summary" property="twitter:card"/>
+<meta content="Top 5 most interesting and usable python tricks in 2021." property="twitter:title"/>
+<meta content="The best and most interesting tips and tricks for python which can be used by any developer whether you are a beginner or a experienced developer, I promise you will definitely learn something from here. " property="twitter:description"/>
+<meta content="https://cdn.jsdelivr.net/gh/Sapython/Sapython.github.io@master/images/Top 5 most helpful python tricks.png" property="twitter:image"/>
+<meta content="Top 5 most interesting and usable python tricks in 2021." property="twitter:image:alt"/>
+<meta content="@kumar_saptam" name="twitter:site"/>
+<meta content="@kumar_saptam" name="twitter:creator"/>
+<!-- General tags -->
+<meta content="#1b202a" name="theme-color"/>
+<meta content="Global" name="distribution"/>
+<meta content="Kumar Saptam" name="author"/>
+<link href="http://sapython.me/favicon.ico" rel="icon" sizes="192x192"/>
+<link href="http://sapython.me/favicon.ico" rel="icon" sizes="192x192 16x16 32x32 64x64 128x128"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="600" http-equiv="Expires"/>
+<meta content="The best and most interesting tips and tricks for python which can be used by any developer whether you are a beginner or a experienced developer, I promise you will definitely learn something from here. " name="description"/>
+<meta content=" , definitely learn something" name="keywords"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="sapython" name="application-name"/>
+<meta content="Kumar Saptam" name="designer"/>
+<meta content="Kumar Saptam" name="owner"/>
+<meta content="./pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html" name="url"/>
+<meta content="Top 5 most interesting and usable python tricks in 2021." name="pagename"/>
+<meta content="Worldwide" name="coverage"/>
+<meta content="General" name="rating"/>
+<meta content="7 days" name="revisit-after"/>
+<meta content="all" name="target"/>
+<meta content="True" name="HandheldFriendly"/>
+<meta content="320" name="MobileOptimized"/>
+<meta content="20 May, 2021" name="date"/>
+<meta content="home page" name="medium"/>
+<!-- Apple tags -->
+<meta content="Sapython" name="apple-mobile-web-app-title"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="yes" name="apple-touch-fullscreen"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<link href="http://sapython.me/logo.png" rel="apple-touch-icon" type="image/png"/>
+<link href="http://sapython.me/logo-72-72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="http://sapython.me/logo-114-114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="http://sapython.me/Sapython-Banner.png" rel="apple-touch-startup-image"/>
+<link href="http://sapython.me/logo-114-114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+<link href="http://sapython.me/logo-72-72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="http://sapython.me/logo-57-57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<!-- Google tags -->
+<meta content=" , definitely learn something" name="news_keywords"/>
+<meta content="index, follow" name="robots"/>
+<meta name="Googlebot:noarchive"/>
+<meta content="https://www.metatags.org/nospamharvesting" name="no-email-collection"/>
+<meta content="7 days" name="revisit-after"/>
+<!-- Custom Site Tags -->
+<meta content="Tips and Tricks" property="post:category"/>
+<!-- Site tags and sources -->
+<link href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" rel="stylesheet"/>
+<link href="styles/howToStyle.css" rel="stylesheet"/>
+<link href="http://sapython.me/favicon.ico" rel="icon" sizes="16x16 32x32" type="image/png"/>
+<link async="" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" loading="lazy" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
+<link crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" loading="lazy" rel="stylesheet"/>
+<script async="async" src="https://platform-api.sharethis.com/js/sharethis.js#property=6076cfc56f8e97001192ac41&amp;product=inline-follow-buttons" type="text/javascript"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-37TRNTCP6D"></script>
+<script async="" src="https://cse.google.com/cse.js?cx=40adf45a21f030abf"></script>
+</head>
+<body>
+<nav class="uk-navbar-container navBar" uk-navbar="">
+<div class="uk-navbar-left">
+<button class="uk-padding-small" name="Navigation" style="background-color: transparent;border:none;" type="button" uk-toggle="target: #offcanvas-nav-primary">
+<span class="fa fa-compass" style="color:rgb(255, 174, 24);font-size:xx-large"></span>
+</button>
+</div>
+<div class="uk-navbar-center">
+<img alt="Sapython Official Logo" class="sapythonLogo" src="./favicon.ico"/>
+<p class="logoTextFormatted" id="onMobile">Kumar Saptam</p>
+<p class="logoTextFormatted uk-margin-medium-left" id="onDesktop">Sapython</p>
+</div>
+<div class="uk-navbar-right uk-margin-medium-right" id="onDesktop">
+<ul class="uk-navbar-nav">
+<li class="uk-active"><a href="https://sapython.me/">Home</a></li>
+<li><a href="https://sapython.me/pages/blog/blog.html">Blog</a></li>
+<li>
+<a href="#">Posts</a>
+<div class="uk-navbar-dropdown bg5" uk-dropdown="animation: uk-animation-slide-top; duration: 400;delay-hide:300;">
+<ul class="uk-nav uk-navbar-dropdown-nav">
+<li class="uk-active uk-dark"><a href="#">Active</a></li>
+<li><a href="#">Top Python tricks</a></li>
+<li><a href="#">Item</a></li>
+</ul>
+</div>
+</li>
+<li><a href="#">Item</a></li>
+<li><a href="#"><button class="bttn-pill bttn-fill bttn-md bttn-primary">Products</button></a></li>
+<div class="liftup uk-margin">
+<div class="gcse-search">
+<script loading="lazy">
+                            var a = setInterval(() => {
+                                var elements = document.getElementsByClassName("gsc-search-button")
+                                console.log("ELemets " + elements, elements.length)
+                                for (let i = 0; i < elements.length; i++) {
+                                    elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
+                                    console.log("ELement data", elements[0].innerHTML)
+                                    clearInterval(a);
+                                }
+
+                            }, 500
+                            )
+                        </script>
+</div>
+</div>
+</ul>
+</div>
+<div id="offcanvas-nav-primary" uk-offcanvas="mode: push;overlay: true">
+<div class="uk-offcanvas-bar uk-flex uk-flex-column" id="navigationContainer"><div><button class="uk-offcanvas-close" type="button" uk-close=""></button>
+<ul id="navigation" uk-accordion=""><li>
+<a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Blog</a>
+<div class="uk-accordion-content">
+<ul style="list-style: none;">
+<li><a class="uk-text-italic" href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html"><span class="fa fa-chevron-right" style="color:orange;"></span> Top-5-Most-Interesting-And-Usable-Python-Tricks-In-2021-.Html</a></li></ul>
+</div>
+</li>
+<li>
+<a class="txt" href="https://sapython.me/pages/contact/contact.html" style="font-size:1.25rem">
+                Contact
+                </a>
+</li>
+<li>
+<a class="txt" href="https://sapython.me/pages/projects/projects.html" style="font-size:1.25rem">
+                Projects
+                </a>
+</li>
+<li>
+<a class="txt" href="https://sapython.me/index.html" style="font-size:1.25rem">
+                Home
+                </a>
+</li>
+</ul></div></div>
+</div>
+</nav>
+<header class="uk-height-medium" id="header" style="width:100vw;background-color:#2C313B;">
+<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light header" data-src="https://cdn.jsdelivr.net/gh/Sapython/Sapython.github.io@master/images/Top 5 most helpful python tricks.png" uk-img="">
+<p style="font-size: xx-large;">Top 5 most interesting and usable python tricks in 2021.</p>
+</div>
+</header>
+<main>
+<aside>
+<div class="uk-flex-column uk-margin uk-card-default bg2 mainBlogText">
+<div class="uk-card bg2">
+<p style="font-size: xx-large;" uk-tooltip="title: Search; delay: 500">Search</p>
+<div class="liftup uk-margin">
+<div class="gcse-search">
+<script loading="lazy">
+                                var a = setInterval(() => {
+                                    var elements = document.getElementsByClassName("gsc-search-button")
+                                    console.log("ELemets " + elements, elements.length)
+                                    for (let i = 0; i < elements.length; i++) {
+                                        elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
+                                        console.log("ELement data", elements[0].innerHTML)
+                                        clearInterval(a);
+                                    }
+
+                                }, 500
+                                )
+                            </script>
+</div>
+</div>
+</div>
+<p style="font-size: xx-large;">About Me</p>
+<div>
+                    A self taught programmer who can build apps, websites, and servers. For any open source or
+                    commercial projects.
+                </div>
+<div class="uk-card bg3 liftup uk-margin">
+<div class="uk-h3"></div>
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: scale">
+<ul class="uk-slideshow-items">
+<li>
+<img alt="" src="../../../images/Sapython-Banner.webp" uk-cover=""/>
+</li>
+<li>
+<img alt="" src="../../../images/website.png" uk-cover=""/>
+</li>
+<li>
+<img alt="" src="../../../images/laptopOnTable.jpg" uk-cover=""/>
+</li>
+</ul>
+<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous="" uk-slideshow-item="previous"></a>
+<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next="" uk-slideshow-item="next"></a>
+</div>
+</div>
+<ul class="bg1" uk-accordion="">
+<li class="bg3 uk-open" style="padding: 5px 10px;">
+<a class="uk-accordion-title txt2" href="#">Most View Post</a>
+<div class="uk-accordion-content" style="padding: 10px 10px;">
+<div class="uk-margin">
+<div class="uk-card uk-card-default">
+<div class="uk-card-media-top">
+<img alt="" src="https://sapython.me/images/javaCode.jpg"/>
+</div>
+<div class="uk-card bg2" style="padding: 5px 10px;">
+<p class="txt" style="font-size:larger">Media Top</p>
+</div>
+</div>
+</div>
+<div class="uk-margin">
+<div class="uk-card uk-card-default">
+<div class="uk-card-media-top">
+<img alt="" src="https://sapython.me/images/javaCode.jpg"/>
+</div>
+<div class="uk-card bg2" style="padding: 5px 10px;">
+<p class="txt" style="font-size:larger">Media Top</p>
+</div>
+</div>
+</div>
+<div class="uk-margin">
+<div class="uk-card uk-card-default">
+<div class="uk-card-media-top">
+<img alt="" src="https://sapython.me/images/javaCode.jpg"/>
+</div>
+<div class="uk-card bg2" style="padding: 5px 10px;">
+<p class="txt" style="font-size:larger">Media Top</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="bg3 uk-padding" style="padding: 5px 10px;">
+<a class="uk-accordion-title txt2" href="#">Post Of the day</a>
+<div class="uk-margin uk-accordion-content">
+<div class="uk-card uk-card-default">
+<div class="uk-card-media-top">
+<img alt="" src="https://sapython.me/images/javaCode.jpg"/>
+</div>
+<div class="uk-card bg2" style="padding: 5px 10px;">
+<p class="txt" style="font-size:larger">Media Top</p>
+</div>
+</div>
+</div>
+</li>
+<li class="bg3 uk-padding" style="padding: 5px 10px;">
+<a class="uk-accordion-title txt2" href="#">My Tweety Twitter.</a>
+<div class="uk-accordion-content">
+<p style="font-size:large;">Follow me on twitter</p>
+<a class="twitter-follow-button" data-show-count="false" href="https://twitter.com/saptam_kumar?ref_src=twsrc%5Etfw">Follow @saptam_kumar</a>
+<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+<p style="font-size:large;">Mention me on twitter</p>
+<a class="twitter-mention-button" data-show-count="false" href="https://twitter.com/intent/tweet?screen_name=saptam_kumar&amp;ref_src=twsrc%5Etfw">Tweet to @saptam_kumar</a>
+<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script>
+</div>
+</li>
+</ul>
+<div class="uk-card bg3 liftup uk-padding" style='background-image: url("../../../images/parallax2.jpg");background-size: cover;'>
+<div>
+<form action="https://sapython.us1.list-manage.com/subscribe/post?u=36945f41714b84a3726d6bf4c&amp;id=fb40d09aa5" class="subscribeFormSidebar uk-text-center" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div class="uk-card">
+<p class="uk-text-center" style="font-size:xx-large;">Subscribe</p>
+<input class="email uk-margin noBorder" id="mce-EMAIL" name="EMAIL" placeholder="Email" required="" type="email"/>
+<div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_36945f41714b84a3726d6bf4c_fb40d09aa5" tabindex="-1" type="text" value=""/></div>
+<div class="clear uk-margin f1"><input class="subscribeButton f1" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"/></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</aside>
+<article>
+<div class="uk-card uk-margin uk-card-default liftup bg2 mainBlogText">
+<h1 class="txt">Top 5 most interesting and usable python tricks in 2021.</h1>
+<div class="uk-flex">
+<img alt="Kumar Saptam" class="avatar" src="http://sapython.me/images/Kumar Saptam.jpg"/>
+<p class="txt uk-margin-medium-left" style="font-size: x-large;">
+                        Kumar Saptam
+                        <br/><time class="uk-text-italic" datetime="2021-05-20T23:25" style="font-size: medium;color:cornflowerblue">20 May, 2021</time>
+</p>
+<div class="sharethis-inline-follow-buttons uk-margin-medium-left"></div>
+</div>
+<h2 id="subheadingUrl">This is subheading</h2>
+<p>The best and most interesting tips and tricks for python which can be used by any developer whether you are a beginner or a experienced developer, I promise you will definitely learn something from here. </p>
+<img alt="" class="uk-align-center imageMedium" src="http://sapython.me/images/Top 5 most helpful python tricks.png"/>
+<div class="spacer"></div>
+<ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s" uk-grid="" uk-sortable="handle: .uk-card">
+<li>
+<div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using lambda for single line or short functions.</div>
+</li>
+<li>
+<div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using slicing for smaller and faster list manipulations.</div>
+</li>
+<li>
+<div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using threads for multiprocessing and faster code execution.</div>
+</li>
+<li>
+<div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using sum to add items of an array quickly and efficiently.</div>
+</li>
+<li>
+<div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Compiling python programs into bytecode.</div>
+</li>
+</ul>
+<div class="spacer"></div>
+<div>
+<div class="uk-article">
+<h1 class="uk-article-title"><a class="uk-link-reset" href="">Using lambda for single line or short functions.</a></h1>
+<img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center" src="../../../images/LamBda.png"/>
+<p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr class="uk-divider-icon" width="50%"/>
+</div>
+<div>
+<div class="uk-article">
+<h1 class="uk-article-title"><a class="uk-link-reset" href="">Using slicing for smaller and faster list manipulations.</a></h1>
+<img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center" src="../../../images/Slicing List.png"/>
+<p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr class="uk-divider-icon" width="50%"/>
+</div>
+<div>
+<div class="uk-article">
+<h1 class="uk-article-title"><a class="uk-link-reset" href="">Using threads for multiprocessing and faster code execution.</a></h1>
+<img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center" src="../../../images/Using threading for multiprocessing.png"/>
+<p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr class="uk-divider-icon" width="50%"/>
+</div>
+<div>
+<div class="uk-article">
+<h1 class="uk-article-title"><a class="uk-link-reset" href="">Using sum to add items of an array quickly and efficiently.</a></h1>
+<img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center" src="../../../images/Using sum to add items of an array quickly and efficiently.png"/>
+<p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr class="uk-divider-icon" width="50%"/>
+</div>
+<div>
+<div class="uk-article">
+<h1 class="uk-article-title"><a class="uk-link-reset" href="">Compiling python programs into bytecode.</a></h1>
+<img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center" src="../../../images/Compiling python programs.png"/>
+<p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<hr class="uk-divider-icon" width="50%"/>
+</div>
+<h3></h3>
+<script data-sil-id="6096082849a8f3001e4ff760">var loadWidget = function () { var d = document, w = window, l = window.location, p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m = function (t, o) { var e = d.getElementsByTagName("script"); e = e[e.length - 1]; var n = d.createElement(t); if (t == "script") { n.async = true; } for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e) }; m("script", { src: p + "bawkbox.com/widget/like-dislike/6096082849a8f3001e4ff760?page=" + encodeURIComponent(l + ''), type: 'text/javascript' }); c.load_net = m; }; if (window.Squarespace) { document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function () { document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() }</script>
+<div class="sil-widget-like-dislike sil-widget" id="sil-widget-6096082849a8f3001e4ff760"><a href="javascript:void(0)">Loading Likes and Dislikes Box </a></div>
+<div class="commentBox">
+<div id="HCB_comment_box">Comments are loading <i class="fi fi-spinner fi-spin fi-pulse txt"></i>
+</div>
+<link href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" rel="stylesheet" type="text/css"/>
+<script id="hcb" type="text/javascript">if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24DwnvLivBAHOUkDBE.oaf80" + "&opts=16862&num=10&ts=1620446167073"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })();</script>
+</div>
+</div>
+</article>
+</main>
+<footer class="uk-section uk-padding-small bg2 liftuptop wrapper" id="footer" style="height: 60vh;">
+<img alt="Heart" class="uk-animation-stroke" height="50" loading="lazy" src="../../../images/heart.svg" width="50"/>
+<p>Made with love from Saptam</p>
+<a href="#header" uk-scroll="">
+<button class="up">
+<span class="fa fa-arrow-up" style="font-size: xx-large;color:white;"></span>
+</button>
+</a>
+<!-- ShareThis BEGIN -->
+<div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
+<div class="uk-flex uk-flex-around uk-width-1-2@l uk-width-1-2@xl uk-width-1-1@s uk-height-1-2@s uk-margin uk-padding">
+<a href="https://www.webwiki.com/sapython.me" title="Customer reviews of sapython.me"><img alt="Reviews of sapython.me" height="80" src="https://www.webwiki.com/etc/rating/widget/1336578861/sapython-me-rating-round-220.png" width="80"/></a>
+<a href="https://trustlock.co" name="trustbadge"><img alt="Trust Badges" height="44" name="trustseal" src="https://trustlock.co/wp-content/uploads/2019/01/guaranteed-safe-checkout-5.png" style="border: 0;" width="238"/></a>
+<a href="https://trustlock.co" name="trustbadge"><img alt="Trust Badges" height="44" name="trustseal" src="https://trustlock.co/wp-content/uploads/2019/01/ssl-checkout-trust-seal.png" style="border: 0;" width="238"/></a>
+<a href="https://razorpay.com/" target="_blank"> <img alt="Razorpay | Payment Gateway | Neobank" referrerpolicy="origin" src="https://badges.razorpay.com/badge-dark.png " style="height: 45px; width: 113px;"/></a>
+</div>
+</footer>
+<script type="application/ld+json">
+        { 
+        "@context": "http://www.schema.org/", 
+        "@type": "Person", 
+        "name" : "Kumar Saptam", 
+        "url": "http://sapython.me/", 
+        "sameAs" : [ 
+        "https://github.com/Sapython/", 
+        "twitter.com/saptam_kumar", 
+        "https://t.me/Saptam2003", 
+        "https://www.linkedin.com/in/kumar-saptam-06312a17b/" 
+        ] 
+        } 
+    </script>
+<script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org/",
+            "@type": "LocalBusiness",
+            "name": "Sapython",
+            "url": "http://sapython.me/",
+            "logo": "http://sapython.me/images/logo.png",
+            "telephone": "+91 9517457296", 
+            "pricerange":["50$", "100$", "300$", "1000$", "5000$"],
+            "image": "http://sapython.me/images/Sapython-Banner.png",
+            "description": "A one stop solution for apps and website get your website running under 6 hours.", 
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "6/202 Avas Vikas Colony, Jhunsi",
+              "addressLocality": "Allahabad",
+              "addressRegion": "Uttar Pradesh",
+              "postalCode": "211019",
+              "addressCountry": "India"
+            },
+            "hasMap": "https://www.google.com/maps/place/SAPYTHON+Website+Studio/@25.424945,81.9089003,17z/data=!3m1!4b1!4m5!3m4!1s0x39854b1065fbdfdd:0xd7a8875ef5f93d8e!8m2!3d25.424945!4d81.911089",
+            "openingHours": "Mo, Tu, We, Th, Fr 08:00-05:30 Sa 08:00-19:30",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "(91) 9517457296",
+              "contactType": "general"
+            }
+          }
+    </script>
+<script src="js/output.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-37TRNTCP6D');
+    </script>
+</body>
+</html>
