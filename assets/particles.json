@@ -71,12 +71,10 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
-        "mode": "none"
+        "enable": false
       },
       "onclick": {
-        "enable": true,
-        "mode": "push"
+        "enable": false
       },
       "resize": true
     },

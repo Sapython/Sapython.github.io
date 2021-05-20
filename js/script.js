@@ -66,12 +66,12 @@ particlesJS("particles-js", {
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
-          "mode": "grab"
+          "enable": false
+         
         },
         "onclick": {
-          "enable": true,
-          "mode": "push"
+          "enable": false
+          
         },
         "resize": true
       },
