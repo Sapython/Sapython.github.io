@@ -93,16 +93,13 @@
     <script src="https://sapython.me/js/prism.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" rel="stylesheet" />
     <link href="styles/howToStyle.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://sapython.me/css/style.css">
+    <link rel="stylesheet" href="https://sapython.me/css/bttn.min.css">
     <link href="https://sapython.me/favicon.ico" rel="icon" sizes="16x16 32x32" type="image/png" />
     <link async="" crossorigin="anonymous"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         loading="lazy" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
-    <link crossorigin="anonymous"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-        loading="lazy" rel="stylesheet" />
     <script async="async"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=6076cfc56f8e97001192ac41&amp;product=inline-follow-buttons"
         type="text/javascript"></script>
@@ -145,10 +142,8 @@
                         <script loading="lazy">
                             var a = setInterval(() => {
                                 var elements = document.getElementsByClassName("gsc-search-button")
-                                console.log("ELemets " + elements, elements.length)
                                 for (let i = 0; i < elements.length; i++) {
                                     elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
-                                    console.log("ELement data", elements[0].innerHTML)
                                     clearInterval(a);
                                 }
 
@@ -213,10 +208,8 @@
                             <script loading="lazy">
                                 var a = setInterval(() => {
                                     var elements = document.getElementsByClassName("gsc-search-button")
-                                    console.log("ELemets " + elements, elements.length)
                                     for (let i = 0; i < elements.length; i++) {
                                         elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
-                                        console.log("ELement data", elements[0].innerHTML)
                                         clearInterval(a);
                                     }
 
@@ -317,7 +310,7 @@
                     </li>
                 </ul>
                 <div class="uk-card bg3 liftup uk-padding"
-                    style='background-image: url("../../../images/parallax2.jpg");background-size: cover;'>
+                    style='background-image: url("../../../images/parallax2.webp");background-size: cover;'>
                     <div>
                         <form
                             action="https://sapython.us1.list-manage.com/subscribe/post?u=36945f41714b84a3726d6bf4c&amp;id=fb40d09aa5"
@@ -388,19 +381,16 @@
                                 short functions.</a></h1>
                         <img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center"
                             src="../../../images/LamBda.png" />
-                        <pre>
-                            <code class="language-css">body {
-                                font: 100% Helvetica, sans-serif;
-                                color: #333;
-                              }
-                              
-                              .box {
-                                -webkit-border-radius: 10px;
-                                -moz-border-radius: 10px;
-                                -ms-border-radius: 10px;
-                                border-radius: 10px;
-                              }
-                            </code>
+                        <pre class="neoMorphic">
+                            <code class="language-python">
+#The lambda function
+functionName=lambda variable: list(str(variable))[0]
+
+#defining a string variable
+a="MyLongCharacter"
+
+#printing the output of our lambda function
+print(functionName(a))</code>
                         </pre>
                         <p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -567,8 +557,6 @@
             }
           }
     </script>
-    <script src="js/output.min.js"></script>
-    <script src="js/script.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }

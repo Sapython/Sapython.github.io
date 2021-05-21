@@ -23,7 +23,7 @@ body{
 }
 @font-face {
     font-family: 'Vintage Modern';
-    src: url('./../assets/fonts/Vintage_Modern.ttf');
+    src: url('./../assets/fonts/Vintage_Modern.woff');
 }
 .bg{
     background-color: #2C313B;
