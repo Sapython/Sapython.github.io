@@ -1,14 +1,5 @@
-importScripts('https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/8.5.0/firebase-messaging.js');
 importScripts('https://cdn.webpushr.com/sw-server.min.js');
-var firebaseConfig = {
-    apiKey: "AIzaSyDcBtiZKm1UQmBx40EMY0wweMIxUXXmB8g",
-    projectId: "sapython-f016a",
-    messagingSenderId: "796109016505",
-    appId: "1:796109016505:web:071d0ecf3d25f5ad8afa68",
-};
-firebase.initializeApp(firebaseConfig);
-const messaging = firebase.messaging();
+console.log("Service worker loaded")
 
 const filesToCache=[
     '/',

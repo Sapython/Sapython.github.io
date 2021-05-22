@@ -108,23 +108,17 @@
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-messaging.js"></script>
   <script type="text/javascript">
-    Notification.requestPermission().then((permission) => {
-      if (permission === 'granted') {
-        console.log('Notification permission granted.');
-      } else {
-        console.log('Unable to get permission to notify.');
-      }
-    });
     if (navigator.serviceWorker.controller) {
       console.log('[PWA] active service worker found, no need to register')
     } else {
-      navigator.serviceWorker.register('pw-ServiceWorker.js', {
+      navigator.serviceWorker.register('webpushr-sw.js', {
         scope: './'
       }).then(function (reg) {
         console.log('Service worker has been registered for scope:' + reg.scope);
       });
     }
-  </script>
+</script>
+  <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BH1JS9pvHCXuWMMso3Vonr_xyrwFUtiRoKJwjr1lK86wTWiccxcIn9FtAd0ms9lnaokQw0JDuKW09uA5Lzkeemg' });</script>
 </head>
 
 <body>
@@ -155,26 +149,22 @@
               <div class="uk-navbar-dropdown bg5"
                 uk-dropdown="animation: uk-animation-slide-top; duration: 400;delay-hide:300;">
                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li class="uk-active uk-dark"><a href="#">Active</a></li>
-                  <li><a href="#">Top Python tricks</a></li>
-                  <li><a href="#">Item</a></li>
+                  <li><a href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html">Top 5 Python tricks</a></li>
                 </ul>
               </div>
             </li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#"><button class="bttn-pill bttn-fill bttn-md bttn-primary">Products</button></a></li>
+            <li><a href="https://sapython.me/pages/contact/contact.html">Contact</a></li>
+            <li><a href="https://sapython.me/pages/projects/projects.html"><button class="bttn-pill bttn-fill bttn-md bttn-primary">Projects</button></a></li>
             <div class="liftup uk-margin">
               <div class="gcse-search">
                 <script loading="lazy">
                   var a = setInterval(() => {
                     var elements = document.getElementsByClassName("gsc-search-button")
-                    console.log("ELemets " + elements, elements.length)
                     for (let i = 0; i < elements.length; i++) {
                       elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
-                      console.log("ELement data", elements[0].innerHTML)
+                      document.getElementById("gsc-i-id1").placeholder="Search"
                       clearInterval(a);
                     }
-
                   }, 500
                   )
                 </script>
@@ -290,6 +280,8 @@
   </section>
   <section class="uk-section-muted uk-padding-small uk-margin-large-top bg" id="projects">
     <!-- <hr height=5 class="uk-divider-icon"> -->
+    <img class="absolute-align-left animationSVG" id="onDesktop" uk-scrollspy="cls: uk-animation-slide-left; repeat: false " src="/images/animationSVGs/Standing.svg">
+    <img class="absolute-align-right absolute-align-bottom-right animationSVG" id="onDesktop" uk-scrollspy="cls: uk-animation-slide-right; repeat: false" src="/images/animationSVGs/Humaaan.svg">
     <div class="txt t2" style="text-align: center;">My Projects</div>
     <div style="margin-top: 40px;">
       <div class="uk-child-width-expand@s uk-text-center"
@@ -364,7 +356,7 @@
         </div>
       </div>
     </div>
-    <div class="uk-text-center uk-margin-medium-top">
+    <div class="uk-text-center uk-margin-medium-top" uk-scrollspy="cls: uk-animation-scale-up; repeat: false">
       <a href="./pages/projects/projects.html">
         <button class="bttn-float bttn-md curvey hrPadding"
           style="background-color:#c21c40;border: none;padding: 5px 30px;">
@@ -376,7 +368,7 @@
   <section class="spacer"></section>
   <section class="uk-section-muted uk-padding-small bg" id="plans">
     <h3 style="font-size: xx-large;color: white;text-align: center;">App Plans</h3>
-    <div class="uk-child-width-expand@s uk-text-center" uk-grid="">
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid="" uk-scrollspy="cls: uk-animation-scale-up; target: >div repeat: false">
       <div>
         <div class="uk-card uk-card-default uk-card-body bg2 txt t3 liftup completeborder">
           App Basic Plan
@@ -568,7 +560,7 @@
                 Options</span>
               <div class="uk-accordion-content">
                 <ul class="uk-list uk-list-muted">
-                  <li class="t5"><span class="fa fa-check correct"></span> A custom hybrid app.ðŸ“±
+                  <li class="t5"><span class="fa fa-check correct"></span> A custom hybrid app. 
                   </li>
                   <li class="t5"><span class="fa fa-check correct"></span> Implements upto 25
                     Features.</li>
@@ -639,20 +631,20 @@
             <img alt="Kumar Saptam" class="userImage liftup" loading="lazy"
               src="https://res.cloudinary.com/sapython/image/upload/v1619787018/Kumar_Saptam_kshcsk.jpg" />
           </div>
-          <div class="uk-card uk-card-body uk-padding-large uk-box-shadow-hover-large uk-width-auto uk-align-center"
+          <div class="uk-card uk-card-body uk-padding-large uk-box-shadow-hover-large uk-width-auto uk-align-center bg3"
             style="margin:20px 20px 0px 20px;">
             <!-- ShareThis BEGIN -->
             <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
-            <p style="font-size: larger;"><span style="font-size: xx-large;">A </span>well-experienced
-              programmer who is dedicated towards making creative and interactive websites and
+            <p style="font-size: larger;"><span style="font-size: xx-large;">A </span> <span class="txt3">well-experienced</span>
+              programmer who is dedicated towards making <span class="txt3">creative</span> and interactive websites and
               apps.</p>
             <p style="font-size: larger;">       Saptam is a well-rounded
-              website and app designer with 6 years of experience working as a
+              <span class="txt3"> website and app designer</span> and developer with <span class="txt3">6 years of experience</span> working as a
               developer and brand identity designer for large corporations, mainly in the e-commerce
               sector.
             </p>
-            <p style="font-size: larger;">       He has been a senior
-              developer for Jaitra since 2018. Most recently, He was responsible for
+            <p style="font-size: larger;">       He has been a <span class="txt3">senior
+              developer for Jaitra since 2018.</span> Most recently, He was responsible for
               solely developing an e-commerce food ordering app for the FryerMan.co. His main focus is
               creating content that not only inspires others but also functions as a powerful marketing
               tool
@@ -661,21 +653,18 @@
               development to exist- a concept he lives out through his interest in coding and playing
               chess.
             </p>
-            <p style="font-size: larger;">       He specializes in hybrid
-              app development and Progressive Web App development. By using
-              technologies like flutter he can create apps both for Android and IOS. Which are high in
+            <p style="font-size: larger;">       He specializes in <span class="txt3">hybrid
+              app development</span> and <span class="txt3">Progressive Web App</span> development. By using
+              technologies like <span class="txt3">flutter</span> he can create apps both for Android and IOS. Which are high in
               performance and look nice with an amazing User Interface built with great User Experience.
-              He
-              also creates Progressive Web App which is performing websites that function as an app but
-              are
+              He also creates Progressive Web App which is performing websites that function as an app but are
               structured like a website, no need to install it just visit the page and it's loaded. </p>
-            <p style="font-size: larger;">       In all of Saptamâ€™s past
-              positions, he has consistently increased software performance,
-              functionality, UI design, improved server management, memberships, newsletter signups, and
+            <p style="font-size: larger;">       In all of Saptam's past
+              positions, he has consistently <span class="txt3">increased software performance</span>,
+              functionality, <span class="txt3">UI design</span>, improved <span class="txt3">server management</span>, memberships, newsletter signups, and
               more.
               He has successfully discovered new niche markets and strategic partnerships for companies of
-              all
-              sizes, refined product strategies, increased brand reach, reworked brands, and developed and
+              all sizes, <span class="txt3">refined product strategies, increased brand reach, reworked brands</span>, and developed and
               implemented technological plans.</p>
             <div class="sharethis-inline-reaction-buttons uk-text-center"></div>
           </div>
@@ -710,7 +699,7 @@
   </section>
   <footer class="uk-padding-small bg2 liftuptop wrapper uk-height-1-2@s uk-padding uk-height-1-3@l uk-height-1-3@xl"
     id="footer">
-    <img alt="Heart" height="50" loading="lazy" src="images/heart.svg" width="50" />
+    <img alt="Heart" height="50" loading="lazy" src="./images/heart.svg" width="50" />
     <p>Made with love from Saptam</p>
     <a href="#header" uk-scroll="">
       <button class="up">
