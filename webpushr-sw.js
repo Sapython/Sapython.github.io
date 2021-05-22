@@ -1,7 +1,6 @@
-
 importScripts('https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.5.0/firebase-messaging.js');
-
+importScripts('https://cdn.webpushr.com/sw-server.min.js');
 var firebaseConfig = {
     apiKey: "AIzaSyDcBtiZKm1UQmBx40EMY0wweMIxUXXmB8g",
     projectId: "sapython-f016a",
