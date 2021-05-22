@@ -14,7 +14,7 @@
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "#a14dff"
       },
       "polygon": {
         "nb_sides": 3
@@ -71,7 +71,8 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false
+        "enable": true,
+        "mode":"bubble"
       },
       "onclick": {
         "enable": false
