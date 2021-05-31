@@ -199,7 +199,13 @@ p{
 .liftuptop:hover {
     box-shadow: -10px -10px 20px #16191f;
 }
-
+.liftupneo{
+    transition: all 1s;
+}
+.liftupneo:hover{
+    background:linear-gradient(120deg,#313641,#14171d);
+    box-shadow: 10px 10px 10px #313641,-10px -10px 20px #14171d;
+}
 .footer {
     display: block;
 }
@@ -562,6 +568,23 @@ p{
 .rounded{
     border-radius: 50px;
 }
+/* socials custom start */
+.socials-custom{
+    display:flex;
+    justify-content:center;
+}
+.socials-custom>a>img{
+    width:50px;
+    height:50px;
+    margin: 10px 10px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+.socials-custom>a>img:hover{
+    box-shadow: 10px 10px 5px rgb(15, 15, 26);
+}
+/* socials custom end */
 /* Icons customs start*/
 .ri-check-fill{
     color:rgb(41, 180, 41);

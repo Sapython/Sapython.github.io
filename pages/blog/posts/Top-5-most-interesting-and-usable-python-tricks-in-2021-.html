@@ -89,22 +89,31 @@
     <!-- Custom Site Tags -->
     <meta content="Tips and Tricks" property="post:category" />
     <!-- Site tags and sources -->
-    <link rel="stylesheet" href="https://sapython.me/css/prism.css">
+    <link href="https://sapython.me/css/prism.css" rel="stylesheet" />
     <script src="https://sapython.me/js/prism.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" rel="stylesheet" />
     <link href="styles/howToStyle.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://sapython.me/css/bttn.min.css">
+    <link href="https://sapython.me/css/bttn.min.css" rel="stylesheet" />
     <link href="https://sapython.me/favicon.ico" rel="icon" sizes="16x16 32x32" type="image/png" />
-    <link async="" crossorigin="anonymous"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        loading="lazy" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
     <script async="async"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=6076cfc56f8e97001192ac41&amp;product=inline-follow-buttons"
         type="text/javascript"></script>
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-37TRNTCP6D"></script>
     <script async="" src="https://cse.google.com/cse.js?cx=40adf45a21f030abf"></script>
+    <script type="text/javascript">
+        if (navigator.serviceWorker.controller) {
+            console.log('[PWA] active service worker found, no need to register')
+        } else {
+            navigator.serviceWorker.register('webpushr-sw.js', {
+                scope: './'
+            }).then(function (reg) {
+                console.log('Service worker has been registered for scope:' + reg.scope);
+            });
+        }
+    </script>
+    <script>(function (w, d, s, id) { if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js"; fjs.parentNode.appendChild(js); }(window, document, 'script', 'webpushr-jssdk')); webpushr('setup', { 'key': 'BH1JS9pvHCXuWMMso3Vonr_xyrwFUtiRoKJwjr1lK86wTWiccxcIn9FtAd0ms9lnaokQw0JDuKW09uA5Lzkeemg' });</script>
 </head>
 
 <body>
@@ -112,7 +121,7 @@
         <div class="uk-navbar-left">
             <button class="uk-padding-small" name="Navigation" style="background-color: transparent;border:none;"
                 type="button" uk-toggle="target: #offcanvas-nav-primary">
-                <span class="fa fa-compass" style="color:rgb(255, 174, 24);font-size:xx-large"></span>
+                <span class="ri-menu-2-line" style="color:#1D89FF;font-size:x-large"></span>
             </button>
         </div>
         <div class="uk-navbar-center">
@@ -129,14 +138,15 @@
                     <div class="uk-navbar-dropdown bg5"
                         uk-dropdown="animation: uk-animation-slide-top; duration: 400;delay-hide:300;">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active uk-dark"><a href="#">Active</a></li>
-                            <li><a href="#">Top Python tricks</a></li>
-                            <li><a href="#">Item</a></li>
+                            <li><a
+                                    href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html">Top
+                                    5 Python tricks</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#"><button class="bttn-pill bttn-fill bttn-md bttn-primary">Products</button></a></li>
+                <li><a href="https://sapython.me/pages/contact/contact.html">Contact</a></li>
+                <li><a href="https://sapython.me/pages/projects/projects.html"><button
+                            class="bttn-pill bttn-fill bttn-md bttn-primary">Projects</button></a></li>
                 <div class="liftup uk-margin">
                     <div class="gcse-search">
                         <script loading="lazy">
@@ -144,9 +154,10 @@
                                 var elements = document.getElementsByClassName("gsc-search-button")
                                 for (let i = 0; i < elements.length; i++) {
                                     elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
+                                    document.getElementById("gsc-i-id1").placeholder = "Search"
+                                    document.getElementById("gsc-i-id1").style.background = "none"
                                     clearInterval(a);
                                 }
-
                             }, 500
                             )
                         </script>
@@ -159,15 +170,30 @@
                 <div><button class="uk-offcanvas-close" type="button" uk-close=""></button>
                     <ul id="navigation" uk-accordion="">
                         <li>
-                            <a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Blog</a>
+                            <a class="txt" href="https://sapython.me/pages/appointment/appointment.html"
+                                style="font-size:1.25rem">
+                                Appointment
+                            </a>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Posts</a>
                             <div class="uk-accordion-content">
                                 <ul style="list-style: none;">
                                     <li><a class="uk-text-italic"
-                                            href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html"><span
-                                                class="fa fa-chevron-right" style="color:orange;"></span>
+                                            href="https://sapython.me/pages/blog/posts/Creating-and-using-modules-in-python-guide-for-2021-.html"><i
+                                                class="ri-pushpin-line"></i>
+                                            Creating-And-Using-Modules-In-Python-Guide-For-2021-.Html</a></li>
+                                    <li><a class="uk-text-italic"
+                                            href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html"><i
+                                                class="ri-pushpin-line"></i>
                                             Top-5-Most-Interesting-And-Usable-Python-Tricks-In-2021-.Html</a></li>
                                 </ul>
                             </div>
+                        </li>
+                        <li>
+                            <a class="txt" href="https://sapython.me/pages/blog/blog.html" style="font-size:1.25rem">
+                                Blog
+                            </a>
                         </li>
                         <li>
                             <a class="txt" href="https://sapython.me/pages/contact/contact.html"
@@ -191,14 +217,406 @@
             </div>
         </div>
     </nav>
-    <header class="uk-height-medium" id="header" style="width:100vw;background-color:#2C313B;">
-        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light header"
-            data-src="https://sapython.me/images/Top 5 most helpful python tricks.png"
+    <header class="uk-height-large" id="header" style="width:100vw;background-color:#2C313B;">
+        <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light header"
+            data-src="../../../images/Backgrounds/pythonTricksBackground.jpg" style="background-position: center;"
             uk-img="">
-            <p style="font-size: xx-large;">Top 5 most interesting and usable python tricks in 2021.</p>
+            <p
+                style="font-size: xx-large;background-color: #2c313bbd;margin:50px 20px;border-radius:20px;padding:20px 20px;text-align:center;color:white;">
+                     Top 5 most interesting and usable python tricks in
+                2021.     </p>
         </div>
     </header>
     <main>
+        <article>
+            <div class="uk-card uk-margin uk-card-default liftup bg2 mainBlogText"
+                id="Top5mostinterestingandusablepythontricksin2021">
+                <a href="#Top5mostinterestingandusablepythontricksin2021"></a>
+                <h1 class="txt">Top 5 most interesting and usable python tricks in 2021.</h1>
+                <div uk-lightbox="">
+                    <a data-caption="Top 5 most interesting and usable python tricks in 2021."
+                        href="../../../images/Top 5 most helpful python tricks.png">
+                        <img alt="Top 5 most interesting and usable python tricks in 2021."
+                            class="uk-card rounded liftup imageCommon uk-align-center"
+                            src="../../../images/Top 5 most helpful python tricks.png" />
+                    </a>
+                </div>
+                <div class="uk-flex flexColumnOnMobile">
+                    <img alt="Kumar Saptam" class="avatar" src="../../../images/Kumar Saptam.jpg" />
+                    <p class="txt uk-margin-medium-left" style="font-size: x-large;">
+                        Kumar Saptam
+                        <br /><time class="uk-text-italic" datetime="2021-05-22T09:00"
+                            style="font-size: medium;color:cornflowerblue">22 May, 2021</time>
+                    </p>
+                    <div class="sharethis-inline-follow-buttons uk-margin-medium-left"></div>
+                </div>
+                <h3 id="subheadingUrl">The best and most interesting tips and tricks for python which can be used by any
+                    developer whether
+                    you are a beginner or a experienced developer, I promise you will definitely learn something from
+                    here.
+                </h3>
+                <p>In this blog we will talk about some of the most underrated and awesome tips of
+                    python which can make your life much easier than ever. You can get all code shown in this blog from
+                    <a href="github.com"> this repository.</a> If find any difficulty in any code or find them not
+                    working please report
+                    them in the comments, it will be helpful for me to solve the problem as soon as possible. Visit our
+                    <a class="txt2" href="../blog.html"> blog</a> if you find
+                    this post interesting or if not checkout it anyway you will surely find something interesting and
+                    new.
+                </p>
+                <p>
+                    The 5 tips which we are going to discuss are:
+                </p>
+                <ol>
+                    <li>Using lambda for quick and single line functions to make your code shorter and much more
+                        comprehensive.</li>
+                    <li>Using slicing for smaller and faster list manipulations.</li>
+                    <li>Using threads for multiprocessing and faster code execution.</li>
+                    <li>Using sum to add items of an array quickly and efficiently.</li>
+                    <li>Compiling python programs into bytecode.</li>
+                </ol>
+                <p>
+                    Now you may not find them as interesting as I have shown here because when I didn't knew these
+                    tricks specialy the <a href="#Usingthreadsformultiprocessingandfastercodeexecution"
+                        uk-scroll="">threading</a> one but now I know and you too. In simple words these are my
+                    favourites tricks which are available in python.
+                </p>
+                <div class="spacer"></div>
+                <ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s" uk-grid=""
+                    uk-sortable="handle: .uk-card">
+                    <li>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using lambda for single
+                            line or short functions.</div>
+                    </li>
+                    <li>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using slicing for smaller
+                            and faster list manipulations.</div>
+                    </li>
+                    <li>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using threads for
+                            multiprocessing and faster code execution.</div>
+                    </li>
+                    <li>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using sum to add items of
+                            an array quickly and efficiently.</div>
+                    </li>
+                    <li>
+                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Compiling python programs
+                            into bytecode.</div>
+                    </li>
+                </ul>
+                <div class="spacer"></div>
+                <div>
+                    <div class="uk-article" id="Usinglambdaforsinglelineorshortfunctions">
+                        <h1 class="uk-article-title">
+                            <a class="uk-link-reset" href="#Usinglambdaforsinglelineorshortfunctions">
+                                Using lambda for single line or short functions.
+                            </a>
+                        </h1>
+                        <div uk-lightbox="">
+                            <a data-caption="Using lambda for single line or short functions."
+                                href="../../../images/LamBda.png">
+                                <img alt="App" class="uk-card rounded liftup imageCommon uk-align-center"
+                                    src="../../../images/LamBda.png" />
+                            </a>
+                        </div>
+                        <pre class="neoMorphic">
+                            <code class="language-python">
+#The lambda function
+functionName=lambda variable: list(str(variable))[0]
+
+#defining a string variable
+a="MyLongCharacter"
+
+#printing the output of our lambda function
+print(functionName(a))</code>
+                        </pre>
+                        <p class="uk-text-lead txt">
+                        </p>
+                        <h4>What is lambda?</h4>
+                        A lambda function is a small anonymous function. A lambda function can take any number of
+                        arguments, but can only have one expression.
+
+                        <p>
+                        </p>
+                        <h4>How lambda is different from a function ?</h4>
+                        Lambda is a type of function which only interprets a single line of command. For example a
+                        function which can return first letter of any word. In this example we start by creating a
+                        varible named <span class="txt2">"functionName"</span> and we give it a value of a lambda
+                        function.<br /> The syntax of lambda function is
+                        <pre><code class="language-python" style="font-size: large;">functionName = lambda x,y,z: x+y+z</code></pre>
+                        Here the functionName is, yeah, your Function Name. And there are three variables named "x",
+                        "y", "z". These are parameters like you give in a normal function. OK, we have our function
+                        defined,
+                        now, how will this function return the value of x+y+z. Good Question. The lambda automatically
+                        returns
+                        any data if our single line code is returning something. And we all ( should ) know that x+y+z
+                        returns
+                        the sum of all the numbers. As we have seen in the IDLE of python.
+
+                        <p>Now let's see both functions and how do they compare.</p>
+                        <div class="uk-flex uk-flex-around" id="onDesktop">
+                            <pre class="neoMorphic"><code class="language-python">
+#The lambda function
+functionName=lambda variable: list(str(variable))[0]
+
+#defining a string variable
+a="MyLongCharacter"
+
+#printing the output of our lambda function
+print(functionName(a))</code></pre>
+                            <pre class="neoMorphic"><code class="language-python">
+#The lambda function
+def functionName:
+    return list(str(variable))[0]
+
+#defining a string variable
+a="MyLongCharacter"
+
+#printing the output of our lambda function
+print(functionName(a))</code></pre>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-flex-around" id="onMobile">
+                        <pre class="neoMorphic"><code class="language-python">
+#The lambda function
+functionName=lambda variable: list(str(variable))[0]
+
+#defining a string variable
+a="MyLongCharacter"
+
+#printing the output of our lambda function
+print(functionName(a))</code></pre>
+                        <pre class="neoMorphic" style="margin-top: 20px;"><code class="language-python">
+#The lambda function
+def functionName:
+    return list(str(variable))[0]
+
+#defining a string variable
+a="MyLongCharacter"
+
+#printing the output of our lambda function
+print(functionName(a))</code></pre>
+                    </div>
+                </div>
+                <hr class="uk-divider-icon uk-align-center" width="50%" />
+                <div>
+                    <div class="uk-article" id="Usingslicingforsmallerandfasterlistmanipulations">
+                        <h1 class="uk-article-title">
+                            <a class="uk-link-reset" href="#Usingslicingforsmallerandfasterlistmanipulations">
+                                Using slicing for smaller and faster list manipulations.
+                            </a>
+                        </h1>
+                        <div uk-lightbox="">
+                            <a data-caption="Using slicing for smaller and faster list manipulations"
+                                href="../../../images/Slicing List.png">
+                                <img alt="Slicing list and strings in python"
+                                    class="uk-card rounded liftup imageCommon uk-align-center"
+                                    src="../../../images/Slicing List.png" />
+                            </a>
+                        </div>
+                        <p class="uk-text-lead txt">
+                        </p>
+                        <h4>What is slicing in python?</h4>
+                        Slicing is a method which makes us access a certain part of a list (array), tuples, and strings
+                        by the use of it's index. The syntax of slicing is simple: <div class="inlineCode"><span
+                                class="txt2">mutableItem</span>[<span class="txt3">start</span>,<span
+                                class="txt4">end</span>,<span class="txt5">step</span>]</div>
+                        <p>Here the mutableItem (a data strucutre which can be modified) is like a list, string, or
+                            tuple.
+                            The slicing works exactly same as a range() function in python. Which can take three
+                            integers.
+                            The first one will be from where it should start the second one is end and the last one is
+                            step
+                            how much step it should take to reach the next element in the data strucutre. For example if
+                            we have a list named
+                        </p>
+                        <div class="inlineCode"><span class="txt2">a</span> =
+                            <span class="txt3">"alpha"</span>
+                        </div> then when we will execute <div class="inlineCode">
+                            <span class="txt2">a[2:3]</span>
+                        </div>. This this will output us <div class="inlineCode"> p </div>
+                        . Because we have asked python to return elements from index 2 to 3. And if we look closely it
+                        did not return
+                        <div class="inlineCode">h </div>   because python skips the last number. So if we want to
+                        return
+                        <div class="inlineCode"> ph </div> we need to write <div class="inlineCode">
+                            <span class="txt2">a[2:4]</span>
+                        </div>.
+
+                        <pre class="neoMorphic"><code class="language-python">
+array=[1,2,3,4,5,6,7,8,9,0] #defined a list
+string="1234567890"
+sets=(1,2,3,4,5,6,7,8,9,0)
+
+#Using slicing
+print(array[0:4])
+#Output => [1, 2, 3, 4]
+print(string[0:4])
+#Output =&gt; 1234  
+print(sets[0:4])
+#Output =&gt; (1, 2, 3, 4)
+print(array[::-1])
+#Output =&gt; [0,9,8,7,6,5,4,3,2,1]</code></pre>
+                    </div>
+                    <hr class="uk-divider-icon uk-align-center" width="50%" />
+                </div>
+                <div>
+                    <div class="uk-article" id="Usingthreadsformultiprocessingandfastercodeexecution">
+                        <h1 class="uk-article-title"><a class="uk-link-reset"
+                                href="#Usingthreadsformultiprocessingandfastercodeexecution">Using threads for
+                                multiprocessing
+                                and faster code execution.</a></h1>
+                        <div uk-lightbox="">
+                            <a data-caption="Using threads for multiprocessing
+                        and faster code execution." href="../../../images/Using threading for multiprocessing.png">
+                                <img alt="App" class="uk-card rounded liftup imageCommon uk-align-center"
+                                    src="../../../images/Using threading for multiprocessing.png" />
+                            </a>
+                        </div>
+                        <p class="uk-text-lead txt">
+                        </p>
+                        <h4>What is threading or threads in python?</h4>
+                        Threading or also known as multiprocessing, is a concept of computers. In which two or more
+                        programs
+                        or process can be run simultaneously.
+
+                        <p>Threads have been around for a long time. An early example of a master/slave multiprocessor
+                            system is the Tandy/Radio Shack TRS-80 Model 16 desktop computer which came out in February
+                            1982 . Threads were omnipresent in python. It functions with the help of cores and threads
+                            available in
+                            most of the modern CPUs. For example you can run two for loops simultaneously. Isn't that
+                            cool.
+                        </p>
+                        <p>
+                            To use threads in python you need to import threading modue.
+                        </p>
+                        <pre class="neoMorphic"><code class="language-python">
+import threading
+
+#our first function
+def firstLoop():
+    for i in range(5):
+        print(i)
+
+#our second function
+def secondLoop():
+    for i in range(5):
+        print(i)
+
+#our first thread
+thread1=threading.Thread(target=firstLoop)
+thread2=threading.Thread(target=secondLoop)
+
+#starting our threads
+thread1.start()
+thread2.start()
+
+#waiting for the threads to end
+thread1.join()
+print("Thread 1 ended")
+thread2.join()
+print("Thread two ended")</code></pre>
+                        <p>
+                        </p>
+                        <h4><span>Code Explanation</span></h4>
+                        First we import threading module. Then we create two functions with for loops inside
+                        it. I made two functions here because threading class only accepts functions on the target
+                        attribute. You can use any function you want as a process.
+
+                    </div>
+                    <hr class="uk-divider-icon uk-align-center" width="50%" />
+                </div>
+                <div>
+                    <div class="uk-article" id="Usingsumtoadditemsofanarrayquicklyandefficiently">
+                        <h1 class="uk-article-title"><a class="uk-link-reset"
+                                href="#Usingsumtoadditemsofanarrayquicklyandefficiently">Using sum to add items of an
+                                array
+                                quickly and efficiently.</a></h1>
+                        <img alt="App" class="uk-card rounded liftup imageCommon uk-align-center"
+                            src="../../../images/Using sum to add items of an array quickly and efficiently.png" />
+                        <p class="uk-text-lead txt">There are many functions which are prebuilt in python. But when it
+                            comes
+                            to adding all elements of a list we all use loops and counter additions to get the sum. But
+                            there
+                            is a simple way to do it. Which is by usin a builtin function known as
+                        </p>
+                        <div class="inlineCode">
+                            <span class="txt3">sum</span><span class="txt2">()</span>
+                        </div>. This function sum is faster than age old loop based addition. I checked the speed of
+                        both
+                        of the functions and the results are:
+                        <pre class="neoMorphic"><code class="language-python">sum =&gt; Total time taken 0.0
+for loop =&gt; Total time taken 0.003001689910888672</code></pre>
+                        <p>I know they are very close but you need to write less code and you also get more performance,
+                            so there
+                            is not a reason to not use it.
+                        </p>
+                        <h4>The code</h4>
+                        <pre class="neoMorphic"><code class="language-python">a=[1,2,3.0,5,6.0]
+a=(1,2,3.0,4,5.0,6)
+sum(a) # return the addition of all the elements ==&gt; 21</code></pre>
+                        <h4>Code explanation</h4>
+                        <p>
+                            We first write a data strucutre. The accepted data strucutre which can be used are lists and
+                            tuples,
+                            which can only contain support integers or float numbers. Then we use the function sum with
+                            parameter
+                            of a data structure.
+                        </p>
+                    </div>
+                    <hr class="uk-divider-icon uk-align-center" width="50%" />
+                </div>
+                <div>
+                    <div class="uk-article" id="Compilingpythonprogramsintobytecode">
+                        <h1 class="uk-article-title"><a class="uk-link-reset"
+                                href="#Compilingpythonprogramsintobytecode">Compiling python programs into
+                                bytecode.</a></h1>
+                        <img alt="App" class="uk-card rounded liftup imageCommon uk-align-center"
+                            src="../../../images/Compiling python programs.png" />
+                        <p class="uk-text-lead txt">Whenever you run a python program, python converts your code into
+                            machine code,
+                            which then can be interpreted and executed to give a desired program logic. But whenever we
+                            write a very
+                            big code python takes time to convert it into machine code. So we can compile the python
+                            file into
+                            machine code to help caching and speeding up your python program execution.
+                        </p>
+                        <h4>What is py compile?</h4>
+                        <p>
+                            Py compile is a library inbuilt into python which handles the conversion of human readable
+                            python code
+                            into machine code.
+                        </p>
+                        <h4>How to compile python or use py compile?</h4>
+                        <pre class="neoMorphic"><code class="language-python">import py_compile
+py_compile.compile("pythonFile.py")</code></pre>
+                        <h4>Code Explanation</h4>
+                        <p>
+                            First we import py_compile module. Then we use
+                        </p>
+                        <div class="inlineCode"><span class="txt3">.compile</span><span class="txt2">()</span></div>
+                        function of py_comile module with an attribute
+                        of a python file path.
+
+                    </div>
+                    <hr class="uk-divider-icon uk-align-center" width="50%" />
+                </div>
+                <h3></h3>
+                <script
+                    data-sil-id="6096082849a8f3001e4ff760">var loadWidget = function () { var d = document, w = window, l = window.location, p = l.protocol == "file:" ? "https://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m = function (t, o) { var e = d.getElementsByTagName("script"); e = e[e.length - 1]; var n = d.createElement(t); if (t == "script") { n.async = true; } for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e) }; m("script", { src: p + "bawkbox.com/widget/like-dislike/6096082849a8f3001e4ff760?page=" + encodeURIComponent(l + ''), type: 'text/javascript' }); c.load_net = m; }; if (window.Squarespace) { document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function () { document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() }</script>
+                <div class="sil-widget-like-dislike sil-widget" id="sil-widget-6096082849a8f3001e4ff760"><a
+                        href="javascript:void(0)">Loading Likes and Dislikes Box </a></div>
+                <div class="commentBox">
+                    <div id="HCB_comment_box">Comments are loading <i class="fi fi-spinner fi-spin fi-pulse txt"></i>
+                    </div>
+                    <link href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"
+                        rel="stylesheet" type="text/css" />
+                    <script id="hcb"
+                        type="text/javascript">if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24DwnvLivBAHOUkDBE.oaf80" + "&opts=16862&num=10&ts=1620446167073"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })();</script>
+                </div>
+            </div>
+        </article>
         <aside>
             <div class="uk-flex-column uk-margin uk-card-default bg2 mainBlogText">
                 <div class="uk-card bg2">
@@ -210,9 +628,10 @@
                                     var elements = document.getElementsByClassName("gsc-search-button")
                                     for (let i = 0; i < elements.length; i++) {
                                         elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
+                                        document.getElementById("gsc-i-id1").placeholder = "Search"
+                                        document.getElementById("gsc-i-id1").style.background = "none"
                                         clearInterval(a);
                                     }
-
                                 }, 500
                                 )
                             </script>
@@ -245,53 +664,64 @@
                             uk-slidenav-next="" uk-slideshow-item="next"></a>
                     </div>
                 </div>
-                <ul class="bg1" uk-accordion="">
+                <ul class="bg1" uk-accordion="collapsible: false">
                     <li class="bg3 uk-open" style="padding: 5px 10px;">
                         <a class="uk-accordion-title txt2" href="#">Most View Post</a>
-                        <div class="uk-accordion-content" style="padding: 10px 10px;">
-                            <div class="uk-margin">
+                        <div class="uk-accordion-content" id="featuredPosts">
+                            <a
+                                href="https://sapython.me/pages/blog/posts/Creating-and-using-modules-in-python-guide-for-2021-.html">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-media-top">
-                                        <img alt="" src="https://sapython.me/images/javaCode.jpg" />
+                                        <img alt="Basics of module in python. Guide for 2021."
+                                            src="../../../images/blogImages/Creating-and-using-modules-in-python-guide-for-2021/Basic Baking Guide Blog Banner.png" />
                                     </div>
                                     <div class="uk-card bg2" style="padding: 5px 10px;">
-                                        <p class="txt" style="font-size:larger">Media Top</p>
+                                        <p class="txt" style="font-size:larger">Basics of module in python. Guide for
+                                            2021.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="uk-margin">
+                            </a>
+                            <a class="uk-margin"
+                                href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-media-top">
-                                        <img alt="" src="https://sapython.me/images/javaCode.jpg" />
+                                        <img alt="Top 5 most helpful python tricks."
+                                            src="../../../images/Top 5 most helpful python tricks.png" />
                                     </div>
                                     <div class="uk-card bg2" style="padding: 5px 10px;">
-                                        <p class="txt" style="font-size:larger">Media Top</p>
+                                        <p class="txt" style="font-size:larger">Top 5 most helpful python tricks.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="uk-margin">
+                            </a>
+                            <a class="uk-margin" href="https://sapython.me/pages/blog/blog.html">
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-media-top">
-                                        <img alt="" src="https://sapython.me/images/javaCode.jpg" />
+                                        <img alt="BLOG graphic" src="../../../images/BLOG.webp" />
                                     </div>
                                     <div class="uk-card bg2" style="padding: 5px 10px;">
-                                        <p class="txt" style="font-size:larger">Media Top</p>
+                                        <p class="txt" style="font-size:larger">Visit Our Blog For top most and best
+                                            posts.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </li>
                     <li class="bg3 uk-padding" style="padding: 5px 10px;">
                         <a class="uk-accordion-title txt2" href="#">Post Of the day</a>
                         <div class="uk-margin uk-accordion-content">
-                            <div class="uk-card uk-card-default">
-                                <div class="uk-card-media-top">
-                                    <img alt="" src="https://sapython.me/images/javaCode.jpg" />
+                            <a
+                                href="https://sapython.me/pages/blog/posts/Creating-and-using-modules-in-python-guide-for-2021-.html">
+                                <div class="uk-card uk-card-default">
+                                    <div class="uk-card-media-top">
+                                        <img alt="Basics of module in python. Guide for 2021."
+                                            src="../../../images/blogImages/Creating-and-using-modules-in-python-guide-for-2021/Basic Baking Guide Blog Banner.png" />
+                                    </div>
+                                    <div class="uk-card bg2" style="padding: 5px 10px;">
+                                        <p class="txt" style="font-size:larger">Basics of module in python. Guide for
+                                            2021.</p>
+                                    </div>
                                 </div>
-                                <div class="uk-card bg2" style="padding: 5px 10px;">
-                                    <p class="txt" style="font-size:larger">Media Top</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </li>
                     <li class="bg3 uk-padding" style="padding: 5px 10px;">
@@ -309,7 +739,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="uk-card bg3 liftup uk-padding"
+                <div class="uk-card bg3 liftup uk-padding" id="subscribe"
                     style='background-image: url("../../../images/parallax2.webp");background-size: cover;'>
                     <div>
                         <form
@@ -332,188 +762,18 @@
                 </div>
             </div>
         </aside>
-        <article>
-            <div class="uk-card uk-margin uk-card-default liftup bg2 mainBlogText">
-                <h1 class="txt">Top 5 most interesting and usable python tricks in 2021.</h1>
-                <div class="uk-flex">
-                    <img alt="Kumar Saptam" class="avatar" src="../../../images/Kumar Saptam.jpg" />
-                    <p class="txt uk-margin-medium-left" style="font-size: x-large;">
-                        Kumar Saptam
-                        <br /><time class="uk-text-italic" datetime="2021-05-20T23:25"
-                            style="font-size: medium;color:cornflowerblue">20 May, 2021</time>
-                    </p>
-                    <div class="sharethis-inline-follow-buttons uk-margin-medium-left"></div>
-                </div>
-                <h2 id="subheadingUrl">This is subheading</h2>
-                <p>The best and most interesting tips and tricks for python which can be used by any developer whether
-                    you are a beginner or a experienced developer, I promise you will definitely learn something from
-                    here. </p>
-                <img alt="" class="uk-align-center imageMedium"
-                    src="https://sapython.me/images/Top 5 most helpful python tricks.png" />
-                <div class="spacer"></div>
-                <ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s" uk-grid=""
-                    uk-sortable="handle: .uk-card">
-                    <li>
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using lambda for single
-                            line or short functions.</div>
-                    </li>
-                    <li>
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using slicing for smaller
-                            and faster list manipulations.</div>
-                    </li>
-                    <li>
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using threads for
-                            multiprocessing and faster code execution.</div>
-                    </li>
-                    <li>
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Using sum to add items of
-                            an array quickly and efficiently.</div>
-                    </li>
-                    <li>
-                        <div class="uk-card uk-card-default uk-card-body uk-text-center bg4">Compiling python programs
-                            into bytecode.</div>
-                    </li>
-                </ul>
-                <div class="spacer"></div>
-                <div>
-                    <div class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Using lambda for single line or
-                                short functions.</a></h1>
-                        <img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center"
-                            src="../../../images/LamBda.png" />
-                        <pre class="neoMorphic">
-                            <code class="language-python">
-#The lambda function
-functionName=lambda variable: list(str(variable))[0]
-
-#defining a string variable
-a="MyLongCharacter"
-
-#printing the output of our lambda function
-print(functionName(a))</code>
-                        </pre>
-                        <p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <hr class="uk-divider-icon" width="50%" />
-                </div>
-                <div>
-                    <div class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Using slicing for smaller and
-                                faster list manipulations.</a></h1>
-                        <img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center"
-                            src="../../../images/Slicing List.png" />
-                        <p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <hr class="uk-divider-icon" width="50%" />
-                </div>
-                <div>
-                    <div class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Using threads for multiprocessing
-                                and faster code execution.</a></h1>
-                        <img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center"
-                            src="../../../images/Using threading for multiprocessing.png" />
-                        <p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <hr class="uk-divider-icon" width="50%" />
-                </div>
-                <div>
-                    <div class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Using sum to add items of an array
-                                quickly and efficiently.</a></h1>
-                        <img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center"
-                            src="../../../images/Using sum to add items of an array quickly and efficiently.png" />
-                        <p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <hr class="uk-divider-icon" width="50%" />
-                </div>
-                <div>
-                    <div class="uk-article">
-                        <h1 class="uk-article-title"><a class="uk-link-reset" href="">Compiling python programs into
-                                bytecode.</a></h1>
-                        <img alt="App" class="uk-card rounded liftup uk-height-large uk-align-center"
-                            src="../../../images/Compiling python programs.png" />
-                        <p class="uk-text-lead txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <hr class="uk-divider-icon" width="50%" />
-                </div>
-                <h3></h3>
-                <script
-                    data-sil-id="6096082849a8f3001e4ff760">var loadWidget = function () { var d = document, w = window, l = window.location, p = l.protocol == "file:" ? "https://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m = function (t, o) { var e = d.getElementsByTagName("script"); e = e[e.length - 1]; var n = d.createElement(t); if (t == "script") { n.async = true; } for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e) }; m("script", { src: p + "bawkbox.com/widget/like-dislike/6096082849a8f3001e4ff760?page=" + encodeURIComponent(l + ''), type: 'text/javascript' }); c.load_net = m; }; if (window.Squarespace) { document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function () { document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() }</script>
-                <div class="sil-widget-like-dislike sil-widget" id="sil-widget-6096082849a8f3001e4ff760"><a
-                        href="javascript:void(0)">Loading Likes and Dislikes Box </a></div>
-                <div class="commentBox">
-                    <div id="HCB_comment_box">Comments are loading <i class="fi fi-spinner fi-spin fi-pulse txt"></i>
-                    </div>
-                    <link href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0"
-                        rel="stylesheet" type="text/css" />
-                    <script id="hcb"
-                        type="text/javascript">if (!window.hcb_user) { hcb_user = {}; } (function () { var s = document.createElement("script"), l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"), h = "https://www.htmlcommentbox.com"; s.setAttribute("type", "text/javascript"); s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24DwnvLivBAHOUkDBE.oaf80" + "&opts=16862&num=10&ts=1620446167073"); if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s); })();</script>
-                </div>
-            </div>
-        </article>
     </main>
     <footer class="uk-section uk-padding-small bg2 liftuptop wrapper" id="footer" style="height: 60vh;">
-        <img alt="Heart" class="uk-animation-stroke" height="50" loading="lazy" src="../../../images/heart.svg"
+        <img alt="Heart" class="uk-animation-stroke" height="50" loading="lazy" src="../../../images/heart.png"
             width="50" />
         <p>Made with love from Saptam</p>
         <a href="#header" uk-scroll="">
             <button class="up">
-                <span class="fa fa-arrow-up" style="font-size: xx-large;color:white;"></span>
+                <span class="ri-arrow-up-line" style="font-size: xx-large;color:white;"></span>
             </button>
         </a>
         <!-- ShareThis BEGIN -->
         <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
-        <div
-            class="uk-flex uk-flex-around uk-width-1-2@l uk-width-1-2@xl uk-width-1-1@s uk-height-1-2@s uk-margin uk-padding">
-            <a href="https://www.webwiki.com/sapython.me" title="Customer reviews of sapython.me"><img
-                    alt="Reviews of sapython.me" height="80"
-                    src="https://www.webwiki.com/etc/rating/widget/1336578861/sapython-me-rating-round-220.png"
-                    width="80" /></a>
-            <a href="https://trustlock.co" name="trustbadge"><img alt="Trust Badges" height="44" name="trustseal"
-                    src="https://trustlock.co/wp-content/uploads/2019/01/guaranteed-safe-checkout-5.png"
-                    style="border: 0;" width="238" /></a>
-            <a href="https://trustlock.co" name="trustbadge"><img alt="Trust Badges" height="44" name="trustseal"
-                    src="https://trustlock.co/wp-content/uploads/2019/01/ssl-checkout-trust-seal.png" style="border: 0;"
-                    width="238" /></a>
-            <a href="https://razorpay.com/" target="_blank"> <img alt="Razorpay | Payment Gateway | Neobank"
-                    referrerpolicy="origin" src="https://badges.razorpay.com/badge-dark.png "
-                    style="height: 45px; width: 113px;" /></a>
-        </div>
     </footer>
     <script type="application/ld+json">
         { 

@@ -99,7 +99,7 @@
   <link href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" loading="lazy" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link href="/favicon.ico" rel="icon" sizes="16x16 32x32" type="image/png" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
   <script async="" src="https://cse.google.com/cse.js?cx=40adf45a21f030abf"></script>
   <script loading="lazy" src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
   <script loading="lazy" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -113,8 +113,8 @@
         console.log('Service worker has been registered for scope:' + reg.scope);
       });
     }
-</script>
-  <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));webpushr('setup',{'key':'BH1JS9pvHCXuWMMso3Vonr_xyrwFUtiRoKJwjr1lK86wTWiccxcIn9FtAd0ms9lnaokQw0JDuKW09uA5Lzkeemg' });</script>
+  </script>
+  <script>(function (w, d, s, id) { if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js"; fjs.parentNode.appendChild(js); }(window, document, 'script', 'webpushr-jssdk')); webpushr('setup', { 'key': 'BH1JS9pvHCXuWMMso3Vonr_xyrwFUtiRoKJwjr1lK86wTWiccxcIn9FtAd0ms9lnaokQw0JDuKW09uA5Lzkeemg' });</script>
 </head>
 
 <body>
@@ -145,12 +145,15 @@
               <div class="uk-navbar-dropdown bg5"
                 uk-dropdown="animation: uk-animation-slide-top; duration: 400;delay-hide:300;">
                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li><a href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html">Top 5 Python tricks</a></li>
+                  <li><a
+                      href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html">Top
+                      5 Python tricks</a></li>
                 </ul>
               </div>
             </li>
             <li><a href="https://sapython.me/pages/contact/contact.html">Contact</a></li>
-            <li><a href="https://sapython.me/pages/projects/projects.html"><button class="bttn-pill bttn-fill bttn-md bttn-primary">Projects</button></a></li>
+            <li><a href="https://sapython.me/pages/projects/projects.html"><button
+                  class="bttn-pill bttn-fill bttn-md bttn-primary">Projects</button></a></li>
             <div class="liftup uk-margin">
               <div class="gcse-search">
                 <script loading="lazy">
@@ -158,8 +161,8 @@
                     var elements = document.getElementsByClassName("gsc-search-button")
                     for (let i = 0; i < elements.length; i++) {
                       elements[i].innerHTML = '<span uk-search-icon style="width:20px;height:20px"></span>'
-                      document.getElementById("gsc-i-id1").placeholder="Search"
-                      document.getElementById("gsc-i-id1").style.background="none"
+                      document.getElementById("gsc-i-id1").placeholder = "Search"
+                      document.getElementById("gsc-i-id1").style.background = "none"
                       clearInterval(a);
                     }
                   }, 500
@@ -174,15 +177,30 @@
             <div><button class="uk-offcanvas-close" type="button" uk-close=""></button>
               <ul id="navigation" uk-accordion="">
                 <li>
-                  <a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Blog</a>
+                  <a class="txt" href="https://sapython.me/pages/appointment/appointment.html"
+                    style="font-size:1.25rem">
+                    Appointment
+                  </a>
+                </li>
+                <li>
+                  <a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Posts</a>
                   <div class="uk-accordion-content">
                     <ul style="list-style: none;">
                       <li><a class="uk-text-italic"
-                          href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html">
-                          <i class="ri-pushpin-line"></i>
+                          href="https://sapython.me/pages/blog/posts/Creating-and-using-modules-in-python-guide-for-2021-.html"><i
+                            class="ri-pushpin-line"></i> Creating-And-Using-Modules-In-Python-Guide-For-2021-.Html</a>
+                      </li>
+                      <li><a class="uk-text-italic"
+                          href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html"><i
+                            class="ri-pushpin-line"></i>
                           Top-5-Most-Interesting-And-Usable-Python-Tricks-In-2021-.Html</a></li>
                     </ul>
                   </div>
+                </li>
+                <li>
+                  <a class="txt" href="https://sapython.me/pages/blog/blog.html" style="font-size:1.25rem">
+                    Blog
+                  </a>
                 </li>
                 <li>
                   <a class="txt" href="https://sapython.me/pages/contact/contact.html" style="font-size:1.25rem">
@@ -207,9 +225,8 @@
       <div class="mainHeaderContent alignCenter wrapper">
         <h1 style="display:none;">A self taught programmer, A self taught solopreneur,</h1>
         <h2 class="horizontalCenter t1" style="color:whitesmoke;text-align: center;">Kumar Saptam</h2>
-        <h3><span class="text-slider-items" style="display: none;">A self taught programmer, A self taught
-            solopreneur, One who can build website, One who can build apps</span>
-        </h3>
+        <h3><span class="text-slider-items" style="display: none;">A self taught programmer, A self taught solopreneur,
+            One who can build website, One who can build apps</span></h3>
         <p class="text-slider" style="color: aliceblue;text-align: center;"></p>
         <div class="uk-flex">
           <a href="#plans" uk-scroll="">
@@ -277,8 +294,10 @@
   </section>
   <section class="uk-section-muted uk-padding-small uk-margin-large-top bg" id="projects">
     <!-- <hr height=5 class="uk-divider-icon"> -->
-    <img class="absolute-align-left animationSVG" id="onDesktop" uk-scrollspy="cls: uk-animation-slide-left; repeat: false " src="/images/animationSVGs/Standing.svg">
-    <img class="absolute-align-right absolute-align-bottom-right animationSVG" id="onDesktop" uk-scrollspy="cls: uk-animation-slide-right; repeat: false" src="/images/animationSVGs/Humaaan.svg">
+    <img class="absolute-align-left animationSVG" id="onDesktop" src="/images/animationSVGs/Standing.svg"
+      uk-scrollspy="cls: uk-animation-slide-left; repeat: false " />
+    <img class="absolute-align-right absolute-align-bottom-right animationSVG" id="onDesktop"
+      src="/images/animationSVGs/Humaaan.svg" uk-scrollspy="cls: uk-animation-slide-right; repeat: false" />
     <div class="txt t2" style="text-align: center;">My Projects</div>
     <div style="margin-top: 40px;">
       <div class="uk-child-width-expand@s uk-text-center"
@@ -287,9 +306,11 @@
         <div class="uk-card uk-card-default uk-card-body uk-margin-small-right bg2 animatedBorder liftup"
           style="height: fit-content;">
           <h2 class="txt t2">Philosophy Today</h2>
-          <p class="t5">A wordpress based news and blogging website. Made for increasing sales and social media presence.</p>
+          <p class="t5">A wordpress based news and blogging website. Made for increasing sales and social media
+            presence.</p>
           <ul class="uk-list">
-            <li class="t5"><span class="ri-speed-fill" style="color:orange;"></span> Website is optimised and has AMP integrations.</li>
+            <li class="t5"><span class="ri-speed-fill" style="color:orange;"></span> Website is optimised and has AMP
+              integrations.</li>
             <li class="t5"><span class="ri-shield-user-fill" style="color:orange;"></span> Has user
               registration capabilities.</li>
             <li class="t5"><span class="ri-google-play-fill" style="color:orange;"></span> Has standalone
@@ -303,16 +324,16 @@
           <h2 class="txt t2">JPMC Trust</h2>
           <p class="t5">A wordpress based website with core php based development. Made for speed and
             functionality.</p>
-            <ul class="uk-list">
-              <li class="t5"><span class="ri-service-fill" style="color:orange;"></span> Owners are in love
-                with the funtionality.</li>
-              <li class="t5"><span class="ri-bar-chart-fill" style="color:orange;"></span> They get their 
-                admission from this website.</li>
-              <li class="t5"><span class="ri-file-shield-2-fill" style="color:orange;"></span> Comes with full
-                 spam protection throught the website</li>
-              <li class="t5"><span class="ri-road-map-fill" style="color:orange;"></span> The website
-                 shows a full tour of their institution</li>
-            </ul>
+          <ul class="uk-list">
+            <li class="t5"><span class="ri-service-fill" style="color:orange;"></span> Owners are in love
+              with the funtionality.</li>
+            <li class="t5"><span class="ri-bar-chart-fill" style="color:orange;"></span> They get their
+              admission from this website.</li>
+            <li class="t5"><span class="ri-file-shield-2-fill" style="color:orange;"></span> Comes with full
+              spam protection throught the website</li>
+            <li class="t5"><span class="ri-road-map-fill" style="color:orange;"></span> The website
+              shows a full tour of their institution</li>
+          </ul>
         </div>
       </div>
       <div class="uk-child-width-expand@s uk-text-center" style="margin-left: 10vw;margin-right: 10vw;" uk-grid=""
@@ -321,27 +342,31 @@
           style="height: fit-content;">
           <h2 class="txt t2">Jaitra</h2>
           <p class="t5">A Single Page App based PWA website, which is performant and robust.</p>
-            <ul class="uk-list">
-              <li class="t5"><span class="ri-refresh-fill" style="color:orange;"></span> Website has 
+          <ul class="uk-list">
+            <li class="t5"><span class="ri-refresh-fill" style="color:orange;"></span> Website has
               live user interface which updates in real time.</li>
-              <li class="t5"><span class="ri-shield-keyhole-fill" style="color:orange;"></span> The Website is 
-                protected using angular guards</li>
-              <li class="t5"><span class="ri-facebook-fill" style="color:orange;"></span> Integrates with
-                 all social media for the auto posts feature.</li>
-              <li class="t5"><span class="ri-bar-chart-grouped-fill" style="color:orange;"></span> The website
-                 is monitored using pingdom website optimisation tool</li>
-            </ul>
+            <li class="t5"><span class="ri-shield-keyhole-fill" style="color:orange;"></span> The Website is
+              protected using angular guards</li>
+            <li class="t5"><span class="ri-facebook-fill" style="color:orange;"></span> Integrates with
+              all social media for the auto posts feature.</li>
+            <li class="t5"><span class="ri-bar-chart-grouped-fill" style="color:orange;"></span> The website
+              is monitored using pingdom website optimisation tool</li>
+          </ul>
         </div>
         <div class="uk-card uk-card-default uk-card-body uk-margin-small-right bg2 animatedBorder liftup"
           style="height: fit-content;">
           <h2 class="txt t2">Sapython</h2>
           <p class="t5">A custom and static website made for speed and reliabilty.</p>
-            <ul class="uk-list">
-              <li class="t5"><span class="ri-cloud-fill" style="color:orange;"></span> Comes with static and free hosting for fast website.</li>
-              <li class="t5"><span class="ri-pushpin-fill" style="color:orange;"></span> Has blog and post features with super fast speeds.</li>
-              <li class="t5"><span class="ri-notification-fill" style="color:orange;"></span> Provide a push notification features.</li>
-              <li class="t5"><span class="ri-google-fill" style="color:orange;"></span> The website is monitored by Google Search Console And Analytics</li>
-            </ul>
+          <ul class="uk-list">
+            <li class="t5"><span class="ri-cloud-fill" style="color:orange;"></span> Comes with static and free hosting
+              for fast website.</li>
+            <li class="t5"><span class="ri-pushpin-fill" style="color:orange;"></span> Has blog and post features with
+              super fast speeds.</li>
+            <li class="t5"><span class="ri-notification-fill" style="color:orange;"></span> Provide a push notification
+              features.</li>
+            <li class="t5"><span class="ri-google-fill" style="color:orange;"></span> The website is monitored by Google
+              Search Console And Analytics</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -357,7 +382,8 @@
   <section class="spacer"></section>
   <section class="uk-section-muted uk-padding-small bg" id="plans">
     <h3 style="font-size: xx-large;color: white;text-align: center;">App Plans</h3>
-    <div class="uk-child-width-expand@s uk-text-center" uk-grid="" uk-scrollspy="cls: uk-animation-scale-up; target: >div repeat: false">
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid=""
+      uk-scrollspy="cls: uk-animation-scale-up; target: &gt;div repeat: false">
       <div>
         <div class="uk-card uk-card-default uk-card-body bg2 txt t3 liftup completeborder">
           App Basic Plan
@@ -549,7 +575,7 @@
                 Options</span>
               <div class="uk-accordion-content">
                 <ul class="uk-list uk-list-muted">
-                  <li class="t5"><span class="ri-check-fill"></span> A custom hybrid app. 
+                  <li class="t5"><span class="ri-check-fill"></span> A custom hybrid app.
                   </li>
                   <li class="t5"><span class="ri-check-fill"></span> Implements upto 25
                     Features.</li>
@@ -624,17 +650,20 @@
             style="margin:20px 20px 0px 20px;">
             <!-- ShareThis BEGIN -->
             <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
-            <p style="font-size: larger;"><span style="font-size: xx-large;">A </span> <span class="txt3">well-experienced</span>
+            <p style="font-size: larger;"><span style="font-size: xx-large;">A </span> <span
+                class="txt3">well-experienced</span>
               programmer who is dedicated towards making <span class="txt3">creative</span> and interactive websites and
               apps.</p>
-            <p style="font-size: larger;">Sapython the official website for sapython website studio and kumar saptam. Here you can order websites, apps, server managers and cross platform softwares.</p>
+            <p style="font-size: larger;">Sapython the official website for sapython website studio and kumar saptam.
+              Here you can order websites, apps, server managers and cross platform softwares.</p>
             <p style="font-size: larger;">       Saptam is a well-rounded
-              <span class="txt3"> website and app designer</span> and developer with <span class="txt3">6 years of experience</span> working as a
+              <span class="txt3"> website and app designer</span> and developer with <span class="txt3">6 years of
+                experience</span> working as a
               developer and brand identity designer for large corporations, mainly in the e-commerce
               sector.
             </p>
             <p style="font-size: larger;">       He has been a <span class="txt3">senior
-              developer for Jaitra since 2018.</span> Most recently, He was responsible for
+                developer for Jaitra since 2018.</span> Most recently, He was responsible for
               solely developing an e-commerce food ordering app for the FryerMan.co. His main focus is
               creating content that not only inspires others but also functions as a powerful marketing
               tool
@@ -644,19 +673,33 @@
               chess.
             </p>
             <p style="font-size: larger;">       He specializes in <span class="txt3">hybrid
-              app development</span> and <span class="txt3">Progressive Web App</span> development. By using
-              technologies like <span class="txt3">flutter</span> he can create apps both for Android and IOS. Which are high in
+                app development</span> and <span class="txt3">Progressive Web App</span> development. By using
+              technologies like <span class="txt3">flutter</span> he can create apps both for Android and IOS. Which are
+              high in
               performance and look nice with an amazing User Interface built with great User Experience.
               He also creates Progressive Web App which is performing websites that function as an app but are
               structured like a website, no need to install it just visit the page and it's loaded. </p>
             <p style="font-size: larger;">       In all of Saptam's past
               positions, he has consistently <span class="txt3">increased software performance</span>,
-              functionality, <span class="txt3">UI design</span>, improved <span class="txt3">server management</span>, memberships, newsletter signups, and
+              functionality, <span class="txt3">UI design</span>, improved <span class="txt3">server management</span>,
+              memberships, newsletter signups, and
               more.
               He has successfully discovered new niche markets and strategic partnerships for companies of
-              all sizes, <span class="txt3">refined product strategies, increased brand reach, reworked brands</span>, and developed and
+              all sizes, <span class="txt3">refined product strategies, increased brand reach, reworked brands</span>,
+              and developed and
               implemented technological plans.</p>
-            <div class="sharethis-inline-reaction-buttons uk-text-center"></div>
+            <p class="uk-text-center t3">Follow Me</p>
+            <div class="socials-custom">
+              <a href="https://twitter.com/saptam_kumar/" name="Click To Follow me on twitter."><img
+                  alt="Twitter Follow Button" loading="lazy" src="/images/socials/001-twitter.png" /></a>
+              <a href="https://www.linkedin.com/in/kumar-saptam-06312a17b/" name="Click To Follow me on linkdin."><img
+                  alt="Linkedin Follow Button" loading="lazy" src="/images/socials/010-linkedin.png" /></a>
+              <a href="https://www.youtube.com/channel/UCAauImO0bkSUOAQwGjxSx1Q"
+                name="Click To Follow me on youtube."><img alt="Twitter Follow Button" loading="lazy"
+                  src="/images/socials/007-youtube.png" /></a>
+              <a href="https://github.com/Sapython" name="Click To Follow me on twitter."><img
+                  alt="Twitter Follow Button" loading="lazy" src="/images/socials/017-github.png" /></a>
+            </div>
           </div>
         </div>
       </div>
@@ -696,6 +739,8 @@
         <span class="ri-arrow-up-line" style="font-size: 30px;color:white;"></span>
       </button>
     </a>
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
   </footer>
   <script type="application/ld+json">
         { 

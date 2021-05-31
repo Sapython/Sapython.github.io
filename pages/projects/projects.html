@@ -32,7 +32,7 @@
 <link href="../../css/style.css" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
 <link href="/favicon.ico" rel="icon" sizes="16x16 32x32" type="image/png"/>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -51,12 +51,23 @@
 </nav>
 <div id="offcanvas-nav-primary" uk-offcanvas="mode: push;overlay: true">
 <div class="uk-offcanvas-bar uk-flex uk-flex-column" id="navigationContainer"><div><button class="uk-offcanvas-close" type="button" uk-close=""></button>
-<ul id="navigation" uk-accordion=""><li>
-<a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Blog</a>
+<ul id="navigation" uk-accordion="">
+<li>
+<a class="txt" href="https://sapython.me/pages/appointment/appointment.html" style="font-size:1.25rem">
+                Appointment
+                </a>
+</li>
+<li>
+<a class="uk-accordion-title" href="https://sapython.me/pages/blog/blog.html">Posts</a>
 <div class="uk-accordion-content">
 <ul style="list-style: none;">
-<li><a class="uk-text-italic" href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html"><span class="fa fa-chevron-right" style="color:orange;"></span> Top-5-Most-Interesting-And-Usable-Python-Tricks-In-2021-.Html</a></li></ul>
+<li><a class="uk-text-italic" href="https://sapython.me/pages/blog/posts/Creating-and-using-modules-in-python-guide-for-2021-.html"><i class="ri-pushpin-line"></i> Creating-And-Using-Modules-In-Python-Guide-For-2021-.Html</a></li><li><a class="uk-text-italic" href="https://sapython.me/pages/blog/posts/Top-5-most-interesting-and-usable-python-tricks-in-2021-.html"><i class="ri-pushpin-line"></i> Top-5-Most-Interesting-And-Usable-Python-Tricks-In-2021-.Html</a></li></ul>
 </div>
+</li>
+<li>
+<a class="txt" href="https://sapython.me/pages/blog/blog.html" style="font-size:1.25rem">
+                Blog
+                </a>
 </li>
 <li>
 <a class="txt" href="https://sapython.me/pages/contact/contact.html" style="font-size:1.25rem">
@@ -531,7 +542,7 @@
 </div>
 </section>
 <footer class="uk-section uk-padding-small bg2 liftuptop wrapper" id="footer" style="height: 40vh;">
-<img alt="This website is made by Kumar Saptam" class="uk-animation-stroke" height="50" loading="lazy" src="../../images/heart.svg" width="50"/>
+<img alt="This website is made by Kumar Saptam" class="uk-animation-stroke" height="50" loading="lazy" src="../../images/heart.png" width="50"/>
 <p>Made with love from Saptam</p>
 <a href="#header" uk-scroll="">
 <button class="up">
@@ -542,9 +553,9 @@
 <div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
 </footer>
 <script>
-        if (screen.width>=200 && screen.width<=500){
+        if (screen.width >= 200 && screen.width <= 500) {
             document.getElementById("selectors").classList.add("uk-align-center")
-        }else if (screen.width > 500 && screen.width < 900) {
+        } else if (screen.width > 500 && screen.width < 900) {
             document.getElementById('projects').classList.add("uk-child-width-1-2")
         } else if (screen.width > 900 && screen.width < 1400) {
             document.getElementById('projects').classList.add("uk-child-width-1-3")
